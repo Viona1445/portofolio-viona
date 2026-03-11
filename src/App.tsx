@@ -7,12 +7,10 @@ import Projects from './components/Projects';
 import BrandIdentity from './components/BrandIdentity';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
 
 function App() {
   return (
-    <main className="bg-navy-950 min-h-screen text-slate-100 selection:bg-premium-blue/30 cursor-none">
-      <CustomCursor />
+    <main className="bg-navy-950 min-h-screen text-slate-100 selection:bg-premium-blue/30">
       <Navbar />
       <Hero />
       <About />
