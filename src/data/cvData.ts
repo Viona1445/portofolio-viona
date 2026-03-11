@@ -273,7 +273,8 @@ export const cvData = {
             description: {
                 en: "Brand identity for Solvex, a professional Q&A platform. Designed to convey reliability and expert solutions.",
                 id: "Identitas merek untuk Solvex, platform tanya jawab profesional. Dirancang untuk menyampaikan keandalan dan solusi ahli."
-            }
+            },
+            figmaLink: "https://www.figma.com/design/eKAnaFg5WJdftARMBp4Qu2/Brand---Logo-Works?node-id=0-1&p=f&t=JN9txH57blUubQqF-0"
         },
         {
             name: "Synvero",
@@ -281,7 +282,8 @@ export const cvData = {
             description: {
                 en: "Logo design for Synvero, focusing on connectivity and modern tech aesthetics.",
                 id: "Desain logo untuk Synvero, berfokus pada konektivitas dan estetika teknologi modern."
-            }
+            },
+            figmaLink: "https://www.figma.com/design/eKAnaFg5WJdftARMBp4Qu2/Brand---Logo-Works?node-id=0-1&p=f&t=JN9txH57blUubQqF-0"
         },
         {
             name: "Trace Report",
@@ -289,7 +291,8 @@ export const cvData = {
             description: {
                 en: "Visual identity for Trace Report, emphasizing precision and professional tracking.",
                 id: "Identitas visual untuk Trace Report, menekankan presisi dan pelacakan profesional."
-            }
+            },
+            figmaLink: "https://www.figma.com/design/eKAnaFg5WJdftARMBp4Qu2/Brand---Logo-Works?node-id=0-1&p=f&t=JN9txH57blUubQqF-0"
         },
         {
             name: "RivoBooth",
@@ -297,7 +300,8 @@ export const cvData = {
             description: {
                 en: "Fun and professional identity for a modern photobooth application.",
                 id: "Identitas yang menyenangkan dan profesional untuk aplikasi photobooth modern."
-            }
+            },
+            figmaLink: "https://www.figma.com/design/eKAnaFg5WJdftARMBp4Qu2/Brand---Logo-Works?node-id=0-1&p=f&t=JN9txH57blUubQqF-0"
         }
     ]
 };
