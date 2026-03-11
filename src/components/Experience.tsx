@@ -1,10 +1,12 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { cvData } from '../data/cvData';
-import { Calendar, MapPin } from 'lucide-react';
+import { Calendar, MapPin, X } from 'lucide-react';
+import { useState } from 'react';
 
 const Experience = () => {
     const { i18n } = useTranslation();
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const currentLang = i18n.language as 'en' | 'id';
 
     return (
@@ -144,6 +146,38 @@ const Experience = () => {
                     ))}
                 </div>
             </div>
+
+            {/* Lightbox / Modal */}
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImage(null)}
+                        className="fixed inset-0 z-[100] bg-navy-950/90 backdrop-blur-xl flex items-center justify-center p-4 md:p-8 cursor-zoom-out"
+                    >
+                        <motion.button
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            className="absolute top-6 right-6 p-3 bg-white/10 rounded-full text-white hover:bg-white/20 transition-colors z-[110]"
+                            onClick={() => setSelectedImage(null)}
+                        >
+                            <X className="w-6 h-6" />
+                        </motion.button>
+
+                        <motion.img
+                            initial={{ scale: 0.9, y: 20 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.9, y: 20 }}
+                            src={selectedImage}
+                            alt="Full Screen Moment"
+                            className="max-w-full max-h-full object-contain rounded-2xl shadow-2xl border border-white/10"
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };

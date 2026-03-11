@@ -72,7 +72,7 @@ export const cvData = {
                 ]
             },
             proof: "https://www.instagram.com/rivoltatech/",
-            moments: ["/rivolta1.png", "/rivolta2.png", "/rivolta3.png", "/rivolta4.png"]
+            moments: ["/rivolta1.png", "/rivolta2.png", "/rivolta3.png", "/rivolta4.png", "/rivolta5.png", "/rivolta6.png"]
         },
         {
             company: "SETJEN DPR RI",
@@ -144,7 +144,7 @@ export const cvData = {
             school: "Mulawarman University",
             major: "Bachelor’s Degree in Computer Science (Informatics Engineering)",
             period: "08/2021 – Present",
-            gpa: "3.85",
+            gpa: "3.87",
             location: "Samarinda, Indonesia"
         }
     ],
