@@ -109,22 +109,15 @@ const Experience = () => {
                                                     {[...(exp as any).moments, ...(exp as any).moments].map((img: string, i: number) => (
                                                         <motion.div
                                                             key={i}
-                                                            animate={{
-                                                                rotate: i % 2 === 0 ? [0, 2, 0] : [0, -2, 0],
-                                                                y: [0, -5, 0]
-                                                            }}
-                                                            transition={{
-                                                                duration: 3 + (i % 3),
-                                                                repeat: Infinity,
-                                                                ease: "easeInOut"
-                                                            }}
-                                                            whileHover={{ scale: 1.1, zIndex: 20, rotate: 0 }}
-                                                            className="relative flex-shrink-0 w-32 h-44 rounded-2xl overflow-hidden border border-white/5 shadow-xl group/img"
+                                                            whileHover={{ scale: 1.1, zIndex: 20 }}
+                                                            onClick={() => setSelectedImage(img)}
+                                                            className="relative flex-shrink-0 w-32 h-44 rounded-2xl overflow-hidden border border-white/5 shadow-xl group/img cursor-pointer"
                                                         >
                                                             <img
                                                                 src={img}
                                                                 alt={`Moment ${i}`}
                                                                 className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
+                                                                loading="lazy"
                                                             />
                                                             <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity" />
                                                         </motion.div>
