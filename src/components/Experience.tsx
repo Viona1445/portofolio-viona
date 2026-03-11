@@ -83,28 +83,55 @@ const Experience = () => {
                                         </div>
                                     )}
 
-                                    {/* Career Moments Gallery */}
+                                    {/* Career Moments Gallery - Auto-scroll Marquee */}
                                     {(exp as any).moments && (exp as any).moments.length > 0 && (
-                                        <div className="mt-8">
+                                        <div className="mt-8 overflow-hidden">
                                             <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center">
                                                 <span className="w-8 h-px bg-white/10 mr-3" />
                                                 {currentLang === 'en' ? 'Career Moments' : 'Momen Berharga'}
                                             </h4>
-                                            <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide -mx-2 px-2">
-                                                {(exp as any).moments.map((img: string, i: number) => (
-                                                    <motion.div
-                                                        key={i}
-                                                        whileHover={{ scale: 1.05, y: -5 }}
-                                                        className="relative flex-shrink-0 w-32 h-44 rounded-2xl overflow-hidden border border-white/10 group/img"
-                                                    >
-                                                        <img
-                                                            src={img}
-                                                            alt={`Moment ${i}`}
-                                                            className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
-                                                        />
-                                                        <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity" />
-                                                    </motion.div>
-                                                ))}
+
+                                            <div className="relative group/gallery">
+                                                <motion.div
+                                                    className="flex gap-4 w-max"
+                                                    animate={{
+                                                        x: [0, -((exp as any).moments.length * 144)], // 128px width + 16px gap
+                                                    }}
+                                                    transition={{
+                                                        duration: (exp as any).moments.length * 5,
+                                                        repeat: Infinity,
+                                                        ease: "linear",
+                                                    }}
+                                                >
+                                                    {/* Duplicate images for seamless loop */}
+                                                    {[...(exp as any).moments, ...(exp as any).moments].map((img: string, i: number) => (
+                                                        <motion.div
+                                                            key={i}
+                                                            animate={{
+                                                                rotate: i % 2 === 0 ? [0, 2, 0] : [0, -2, 0],
+                                                                y: [0, -5, 0]
+                                                            }}
+                                                            transition={{
+                                                                duration: 3 + (i % 3),
+                                                                repeat: Infinity,
+                                                                ease: "easeInOut"
+                                                            }}
+                                                            whileHover={{ scale: 1.1, zIndex: 20, rotate: 0 }}
+                                                            className="relative flex-shrink-0 w-32 h-44 rounded-2xl overflow-hidden border border-white/5 shadow-xl group/img"
+                                                        >
+                                                            <img
+                                                                src={img}
+                                                                alt={`Moment ${i}`}
+                                                                className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
+                                                            />
+                                                            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity" />
+                                                        </motion.div>
+                                                    ))}
+                                                </motion.div>
+
+                                                {/* Gradient Fades for Smooth Edges */}
+                                                <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-navy-900/80 to-transparent z-10 pointer-events-none" />
+                                                <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-navy-900/80 to-transparent z-10 pointer-events-none" />
                                             </div>
                                         </div>
                                     )}
