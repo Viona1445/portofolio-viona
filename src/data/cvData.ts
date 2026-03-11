@@ -71,7 +71,8 @@ export const cvData = {
                     "Berkontribusi aktif dalam desain UI/UX menggunakan Figma untuk mobile dan web."
                 ]
             },
-            proof: "https://www.instagram.com/rivoltatech/"
+            proof: "https://www.instagram.com/rivoltatech/",
+            moments: ["/rivolta1.png", "/rivolta2.png", "/rivolta3.png", "/rivolta4.png"]
         },
         {
             company: "SETJEN DPR RI",
@@ -92,7 +93,8 @@ export const cvData = {
                     "Menangani Integrasi API, manajemen Database, dan Version Control."
                 ]
             },
-            proof: "https://www.instagram.com/p/C77xOcXyyFC/"
+            proof: "https://www.instagram.com/p/C77xOcXyyFC/",
+            moments: ["/dpr1.png", "/dpr2.png", "/dpr3.png", "/dpr4.png", "/dpr5.png", "/dpr6.png", "/dpr7.png"]
         },
         {
             company: "Bangkit Academy by Google, GoTo, Traveloka",
@@ -113,7 +115,8 @@ export const cvData = {
                     "Mempelajari soft skills: Growth Mindset, Berpikir Kritis, dan Komunikasi Profesional."
                 ]
             },
-            proof: "https://contributors.bangkit.academy/"
+            proof: "https://contributors.bangkit.academy/",
+            moments: ["/bangkit1.png", "/bangkit2.png", "/bangkit3.png"]
         },
         {
             company: "Laboratory Teaching Assistant",
@@ -132,7 +135,8 @@ export const cvData = {
                     "Menjadwalkan tes sebelum kelas dan memberikan evaluasi mendetail."
                 ]
             },
-            proof: "https://www.instagram.com/p/C20ywSzPZWi/"
+            proof: "https://www.instagram.com/p/C20ywSzPZWi/",
+            moments: ["/aslab1.png", "/aslab2.png"]
         }
     ],
     education: [

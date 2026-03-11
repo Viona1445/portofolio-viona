@@ -69,7 +69,7 @@ const Experience = () => {
                                     </ul>
 
                                     {exp.proof && (
-                                        <div className="mt-8 pt-6 border-t border-white/5">
+                                        <div className="mt-8 pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
                                             <a
                                                 href={exp.proof}
                                                 target="_blank"
@@ -80,6 +80,32 @@ const Experience = () => {
                                                     {currentLang === 'en' ? 'View Activity' : 'Lihat Aktivitas'}
                                                 </span>
                                             </a>
+                                        </div>
+                                    )}
+
+                                    {/* Career Moments Gallery */}
+                                    {(exp as any).moments && (exp as any).moments.length > 0 && (
+                                        <div className="mt-8">
+                                            <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center">
+                                                <span className="w-8 h-px bg-white/10 mr-3" />
+                                                {currentLang === 'en' ? 'Career Moments' : 'Momen Berharga'}
+                                            </h4>
+                                            <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide -mx-2 px-2">
+                                                {(exp as any).moments.map((img: string, i: number) => (
+                                                    <motion.div
+                                                        key={i}
+                                                        whileHover={{ scale: 1.05, y: -5 }}
+                                                        className="relative flex-shrink-0 w-32 h-44 rounded-2xl overflow-hidden border border-white/10 group/img"
+                                                    >
+                                                        <img
+                                                            src={img}
+                                                            alt={`Moment ${i}`}
+                                                            className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+                                                        />
+                                                        <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity" />
+                                                    </motion.div>
+                                                ))}
+                                            </div>
                                         </div>
                                     )}
                                 </div>
