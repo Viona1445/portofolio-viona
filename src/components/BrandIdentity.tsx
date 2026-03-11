@@ -53,9 +53,25 @@ const BrandIdentity = () => {
                                     />
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-3 text-center group-hover:text-premium-blue transition-colors">{logo.name}</h3>
-                                <p className="text-slate-400 text-xs text-center leading-relaxed mb-4">
+                                <p className="text-slate-400 text-xs text-center leading-relaxed mb-6">
                                     {logo.description[currentLang]}
                                 </p>
+
+                                {(logo as any).figmaLink && (
+                                    <motion.a
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        href={(logo as any).figmaLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center space-x-2 text-[10px] font-bold text-premium-blue hover:text-white transition-colors group/figma mb-6"
+                                    >
+                                        <span className="px-4 py-2 bg-premium-blue/5 rounded-xl group-hover/figma:bg-premium-blue/20 transition-all border border-premium-blue/10 group-hover/figma:border-premium-blue/30">
+                                            {currentLang === 'en' ? 'View on Figma' : 'Lihat di Figma'}
+                                        </span>
+                                    </motion.a>
+                                )}
+
                                 <div className="mt-auto pt-4 flex items-center justify-center space-x-2 text-[10px] font-bold text-premium-blue uppercase tracking-widest opacity-60">
                                     <PenTool className="w-3 h-3" />
                                     <span>Crafted in Figma</span>
