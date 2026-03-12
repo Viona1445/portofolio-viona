@@ -94,38 +94,22 @@ const Experience = () => {
                                             </h4>
 
                                             <div className="relative group/gallery">
-                                                <motion.div
-                                                    className="flex gap-4 w-max will-change-transform"
-                                                    animate={{
-                                                        x: [0, -((exp as any).moments.length * 144)],
-                                                    }}
-                                                    transition={{
-                                                        duration: (exp as any).moments.length * 8, // Slower for smoother feel
-                                                        repeat: Infinity,
-                                                        ease: "linear",
-                                                    }}
-                                                >
-                                                    {/* Duplicate images for seamless loop */}
-                                                    {[...(exp as any).moments, ...(exp as any).moments].map((img: string, i: number) => (
+                                                <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory scroll-smooth">
+                                                    {(exp as any).moments.map((img: string, i: number) => (
                                                         <div
                                                             key={i}
                                                             onClick={() => setSelectedImage(img)}
-                                                            className="relative flex-shrink-0 w-32 h-44 rounded-2xl overflow-hidden border border-white/5 shadow-lg group/img cursor-pointer"
+                                                            className="relative flex-shrink-0 w-44 h-56 rounded-2xl overflow-hidden border border-white/5 snap-center cursor-zoom-in"
                                                         >
                                                             <img
                                                                 src={img}
                                                                 alt={`Moment ${i}`}
-                                                                className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105"
+                                                                className="w-full h-full object-cover"
                                                                 loading="lazy"
                                                             />
-                                                            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity" />
                                                         </div>
                                                     ))}
-                                                </motion.div>
-
-                                                {/* Gradient Fades for Smooth Edges */}
-                                                <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-navy-900/80 to-transparent z-10 pointer-events-none" />
-                                                <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-navy-900/80 to-transparent z-10 pointer-events-none" />
+                                                </div>
                                             </div>
                                         </div>
                                     )}

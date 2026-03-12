@@ -72,7 +72,7 @@ export const cvData = {
                 ]
             },
             proof: "https://www.instagram.com/rivoltatech/",
-            moments: ["/rivolta1.png", "/rivolta2.png", "/rivolta3.png"]
+            moments: ["/rivolta1.png", "/rivolta2.png"]
         },
         {
             company: "SETJEN DPR RI",
@@ -206,22 +206,22 @@ export const cvData = {
         {
             title: "Rivolta Solusi Teknologi",
             description: {
-                en: "Official company website for Rivolta Solusi Teknologi. Implemented an AI-powered chatbot to enhance user interaction and support.",
-                id: "Website resmi perusahaan untuk Rivolta Solusi Teknologi. Mengimplementasikan chatbot bertenaga AI untuk meningkatkan interaksi dan dukungan pengguna."
+                en: "Revamp of the official company website for Rivolta Solusi Teknologi. Built the design system from scratch and implemented a modern fullstack architecture.",
+                id: "Revamp website resmi perusahaan untuk Rivolta Solusi Teknologi. Membangun sistem desain dari nol dan mengimplementasikan arsitektur fullstack modern."
             },
             overview: {
-                en: "A comprehensive company website designed to showcase Rivolta's services, team, and projects. The highlight is a custom-trained AI chatbot that assists visitors.",
-                id: "Website perusahaan komprehensif yang dirancang untuk memamerkan layanan, tim, dan proyek Rivolta. Unggulannya adalah chatbot AI yang dilatih khusus untuk membantu pengunjung."
+                en: "A professional revamp of the company's digital presence. I was responsible for the entire design process in Figma from the ground up and transforming it into a high-performance web application.",
+                id: "Revamp profesional untuk kehadiran digital perusahaan. Saya bertanggung jawab atas seluruh proses desain di Figma dari nol dan mengubahnya menjadi aplikasi web berperforma tinggi."
             },
             role: {
-                en: "Fullstack Developer & AI Integration Specialist. Built the frontend using React and integrated the AI backend.",
-                id: "Fullstack Developer & Spesialis Integrasi AI. Membangun frontend menggunakan React dan mengintegrasikan backend AI."
+                en: "UI/UX Designer & Fullstack Developer. Designed the core brand identity and built the frontend-to-backend integration.",
+                id: "UI/UX Designer & Fullstack Developer. Mendesain identitas merek inti dan membangun integrasi frontend-ke-backend."
             },
             features: {
-                en: ["AI-Powered Chatbot", "Responsive Design", "Multilingual Support", "Service Catalog"],
-                id: ["Chatbot Berbasis AI", "Desain Responsif", "Dukungan Multi-bahasa", "Katalog Layanan"]
+                en: ["Figma Design System", "Professional Revamp", "AI Chatbot Integration", "Responsive UI"],
+                id: ["Sistem Desain Figma", "Revamp Profesional", "Integrasi Chatbot AI", "UI Responsif"]
             },
-            stack: ["React", "AI Integration", "Tailwind CSS"],
+            stack: ["React", "Figma", "Tailwind CSS"],
             type: "Website",
             image: "/rivoltawebsite1.png",
             screenshots: ["/rivoltawebsite1.png", "/rivoltawebsite2.png", "/rivoltawebsite3.png"],
@@ -231,22 +231,22 @@ export const cvData = {
         {
             title: "ShipHire",
             description: {
-                en: "A comprehensive boat rental and management platform for business. Streamlines the process for both providers and customers with category-based ship recommendations.",
-                id: "Platform penyewaan dan manajemen kapal yang komprehensif untuk bisnis. Merampingkan proses baik untuk penyedia maupun pelanggan dengan rekomendasi kapal berbasis kategori."
+                en: "A boat rental platform. Contributed as a mobile developer focused on improving application stability and fixing critical bugs.",
+                id: "Platform penyewaan kapal. Berkontribusi sebagai pengembang mobile yang berfokus pada peningkatan stabilitas aplikasi dan perbaikan bug kritikal."
             },
             overview: {
-                en: "A dual-interface platform for ship owners and renters. Includes real-time booking, automated invoicing, and a sophisticated categorization system.",
-                id: "Platform antarmuka ganda untuk pemilik kapal dan penyewa. Mencakup pemesanan real-time, penagihan otomatis, dan sistem kategorisasi yang canggih."
+                en: "Handled essential maintenance and bug fixing for the existing mobile application to ensure a smooth user experience for ship renters and owners.",
+                id: "Menangani pemeliharaan esensial dan perbaikan bug untuk aplikasi mobile yang sudah ada guna memastikan pengalaman pengguna yang lancar bagi penyewa dan pemilik kapal."
             },
             role: {
-                en: "Lead Developer. Handled the backend architecture and core booking logic.",
-                id: "Lead Developer. Menangani arsitektur backend dan logika pemesanan inti."
+                en: "Mobile Developer. Focused on bug fixes and maintenance for the existing mobile application.",
+                id: "Pengembang Mobile. Berfokus pada perbaikan bug dan pemeliharaan untuk aplikasi mobile yang ada."
             },
             features: {
-                en: ["Real-time Booking", "Automated Invoicing", "Owner Dashboard", "Ship Categorization"],
-                id: ["Pemesanan Real-time", "Penagihan Otomatis", "Dashboard Pemilik", "Kategorisasi Kapal"]
+                en: ["Bug Fixing", "App Stability", "Maintenance", "Rental Logic"],
+                id: ["Perbaikan Bug", "Stabilitas Aplikasi", "Pemeliharaan", "Logika Penyewaan"]
             },
-            stack: ["React", "Express", "PostgreSQL", "Business"],
+            stack: ["Android Studio", "Bug Fixing", "Maintenance"],
             type: "Mobile App",
             image: "/shiphireapp1.png",
             screenshots: ["/shiphireapp1.png"],
@@ -256,22 +256,22 @@ export const cvData = {
         {
             title: "Trace Report",
             description: {
-                en: "Official delivery tracking and reporting application for Rivolta Solusi Teknologi. Features optimized trace accuracy and enhanced reliability for real-world business challenges.",
-                id: "Aplikasi pelacakan pengiriman dan pelaporan resmi untuk Rivolta Solusi Teknologi. Menampilkan akurasi pelacakan yang dioptimalkan dan peningkatan keandalan untuk tantangan bisnis nyata."
+                en: "Delivery tracking and reporting application. Contributed by fixing core bugs and designing the brand identity.",
+                id: "Aplikasi pelacakan pengiriman dan pelaporan. Berkontribusi dengan memperbaiki bug inti dan mendesain identitas merek."
             },
             overview: {
-                en: "A robust logistics tool for monitoring deliveries in real-time. It provides detailed analytics and instant notifications for delivery status changes.",
-                id: "Alat logistik yang kuat untuk memantau pengiriman secara real-time. Ini menyediakan analitik terperinci dan notifikasi instan untuk perubahan status pengiriman."
+                en: "Assisted in maintaining the mobile application by resolving technical issues and creating the official logo for the project.",
+                id: "Membantu memelihara aplikasi mobile dengan menyelesaikan masalah teknis dan membuat logo resmi untuk proyek tersebut."
             },
             role: {
-                en: "Mobile App Developer. Focused on performance optimization and GPS tracking accuracy.",
-                id: "Pengembang Aplikasi Mobile. Berfokus pada optimasi performa dan akurasi pelacakan GPS."
+                en: "Mobile App Developer & Logo Designer. Resolved application bugs and developed the project's visual identity.",
+                id: "Pengembang Aplikasi Mobile & Desainer Logo. Menyelesaikan bug aplikasi dan mengembangkan identitas visual proyek."
             },
             features: {
-                en: ["Live GPS Tracking", "Status Notifications", "Delivery Analytics", "Offline Support"],
-                id: ["Pelacakan GPS Langsung", "Notifikasi Status", "Analitik Pengiriman", "Dukungan Offline"]
+                en: ["Bug Fixing", "Logo Design", "Branding", "Reporting Logic"],
+                id: ["Perbaikan Bug", "Desain Logo", "Branding", "Logika Pelaporan"]
             },
-            stack: ["Mobile Development", "Optimization", "Business"],
+            stack: ["Mobile Development", "Logo Design", "Bug Fixing"],
             type: "Mobile App",
             image: "/tracereport1.png",
             screenshots: ["/tracereport1.png", "/tracereport2.png", "/tracereport3.png"],
@@ -281,22 +281,22 @@ export const cvData = {
         {
             title: "Synvero",
             description: {
-                en: "Collaborated on the development and maintenance of the Synvero platform, focusing on performance and user experience.",
-                id: "Berkolaborasi dalam pengembangan dan pemeliharaan platform Synvero, fokus pada performa dan pengalaman pengguna."
+                en: "Corporate communication platform. Supported development from the early stages with focus on design consulting and brand identity.",
+                id: "Platform komunikasi korporat. Mendukung pengembangan dari tahap awal dengan fokus pada konsultasi desain dan identitas merek."
             },
             overview: {
-                en: "A versatile meeting and communication platform designed for corporate use. Features high-quality video conferencing and collaborative tools.",
-                id: "Platform pertemuan dan komunikasi serbaguna yang dirancang untuk penggunaan korporat. Menampilkan konferensi video berkualitas tinggi dan alat kolaboratif."
+                en: "As part of the early team, I provided crucial recommendations on colors, styles, and shapes, while also designing the official logo.",
+                id: "Sebagai bagian dari tim awal, saya memberikan rekomendasi krusial tentang warna, gaya, dan bentuk, serta mendesain logo resmi."
             },
             role: {
-                en: "Frontend Developer. Implemented modern UI components and ensured cross-browser compatibility.",
-                id: "Frontend Developer. Mengimplementasikan komponen UI modern dan memastikan kompatibilitas lintas browser."
+                en: "Frontend Developer & Design Consultant. Advised on UI aesthetics and designed the corporate logo.",
+                id: "Frontend Developer & Konsultan Desain. Memberikan saran estetika UI dan mendesain logo korporat."
             },
             features: {
-                en: ["HD Video Conferencing", "Screen Sharing", "Whiteboard Collaboration", "Real-time Chat"],
-                id: ["Konferensi Video HD", "Berbagi Layar", "Kolaborasi Whiteboard", "Chat Real-time"]
+                en: ["Design Consulting", "Logo Design", "UI System Advice", "HD Video Conferencing"],
+                id: ["Konsultasi Desain", "Desain Logo", "Saran Sistem UI", "Konferensi Video HD"]
             },
-            stack: ["React", "Web Development", "UI/UX"],
+            stack: ["React", "Logo Design"],
             type: "Website",
             image: "/synvero1.png",
             screenshots: ["/synvero1.png"],
@@ -310,22 +310,22 @@ export const cvData = {
         {
             title: "RivoBooth",
             description: {
-                en: "A modern photobooth application developed for Synvero/Rivolta, featuring real-time image processing and social sharing.",
-                id: "Aplikasi photobooth modern yang dikembangkan untuk Synvero/Rivolta, menampilkan pemrosesan gambar real-time dan berbagi sosial."
+                en: "Interactive photobooth with a unique 'Ghost Overlay' feature. Led the product flow and core feature ideation from scratch.",
+                id: "Photobooth interaktif dengan fitur unik 'Ghost Overlay'. Memimpin alur produk dan ideasi fitur inti dari nol."
             },
             overview: {
-                en: "An interactive photobooth experience with customizable filters, frames, and instant digital delivery via QR codes.",
-                id: "Pengalaman photobooth interaktif dengan filter yang dapat disesuaikan, bingkai, dan pengiriman digital instan via kode QR."
+                en: "An innovative photobooth experience where I defined the business flow, determined the color palette, and pioneered the 'Ghost Overlay' feature. I also designed the project's mascot and final logo.",
+                id: "Pengalaman photobooth inovatif di mana saya menentukan alur bisnis, palet warna, dan memprakarsai fitur 'Ghost Overlay'. Saya juga mendesain maskot dan logo akhir proyek ini."
             },
             role: {
-                en: "Software Engineer. Developed the real-time image filter engine and integrated the sharing APIs.",
-                id: "Software Engineer. Mengembangkan mesin filter gambar real-time dan mengintegrasikan API berbagi."
+                en: "Product Lead & Software Engineer. Defined business flow, innovated core features, and designed the project mascot/logo.",
+                id: "Product Lead & Software Engineer. Menentukan alur bisnis, inovasi fitur inti, dan mendesain maskot/logo proyek."
             },
             features: {
-                en: ["Custom Frames", "AI Background Removal", "QR Code Sharing", "Instant Print"],
-                id: ["Bingkai Kustom", "Penghapusan Background AI", "Berbagi Kode QR", "Cetak Instan"]
+                en: ["Ghost Overlay Innovation", "Business Flow Design", "Mascot Branding", "Real-time Image Filtering"],
+                id: ["Inovasi Ghost Overlay", "Desain Alur Bisnis", "Branding Maskot", "Filter Gambar Real-time"]
             },
-            stack: ["React", "Node.js", "Image Processing"],
+            stack: ["React", "Product Design", "Logo Design", "Business Flow"],
             type: "Web App",
             image: "/photobooth1.png",
             screenshots: ["/photobooth1.png", "/photobooth2.png", "/photobooth3.png"],
@@ -339,22 +339,22 @@ export const cvData = {
         {
             title: "Solvex",
             description: {
-                en: "A professional Q&A application 'Solve Anything' featuring advanced AI integrations and successfully deployed to the Apple App Store for expert consultations.",
-                id: "Aplikasi tanya jawab profesional 'Solve Anything' yang menampilkan integrasi AI tingkat lanjut dan berhasil dideploy ke Apple App Store untuk konsultasi ahli."
+                en: "An AI-powered professional Q&A app. Handled the end-to-end iOS development and successful App Store release.",
+                id: "Aplikasi tanya jawab profesional bertenaga AI. Menangani pengembangan iOS dari awal hingga akhir dan rilis sukses di App Store."
             },
             overview: {
-                en: "A marketplace for expertise where users can ask complex questions and get answers from verified experts, powered by AI for initial triage.",
-                id: "Marketplace keahlian di mana pengguna dapat mengajukan pertanyaan kompleks dan mendapatkan jawaban dari ahli terverifikasi, didukung oleh AI untuk triase awal."
+                en: "Took full ownership of the iOS implementation, managed complex App Store integrations, and established both UAT and Production environments for backend/frontend integration.",
+                id: "Bertanggung jawab penuh atas implementasi iOS, mengelola integrasi App Store yang kompleks, dan membangun lingkungan UAT serta Produksi untuk integrasi backend/frontend."
             },
             role: {
-                en: "iOS & Backend Developer. Managed the App Store submission process and built the expert verification system.",
-                id: "Pengembang iOS & Backend. Mengelola proses submit App Store dan membangun sistem verifikasi ahli."
+                en: "iOS Developer (App Store Deployment). Handled iOS implementation, App Store release process, and application bug fixing.",
+                id: "Pengembang iOS (Deployment App Store). Menangani implementasi iOS, proses rilis App Store, dan perbaikan bug aplikasi."
             },
             features: {
-                en: ["Expert Verification", "In-app Messaging", "Payment Integration", "AI Search"],
-                id: ["Verifikasi Ahli", "Pesan Dalam Aplikasi", "Integrasi Pembayaran", "Pencarian AI"]
+                en: ["App Store Integration & Deployment", "iOS Handling", "Bug Fixing", "Expert Verification"],
+                id: ["Integrasi & Deployment App Store", "Penanganan iOS", "Perbaikan Bug", "Verifikasi Ahli"]
             },
-            stack: ["Android Studio", "iOS", "App Store Deployment", "AI Integration"],
+            stack: ["iOS", "App Store Deployment", "Bug Fixing"],
             type: "Mobile App",
             image: "/solvex1.png",
             screenshots: ["/solvex1.png", "/solvex2.png"],
@@ -364,22 +364,22 @@ export const cvData = {
         {
             title: "Stroko",
             description: {
-                en: "A specialized health application for stroke monitoring and education, aimed at improving patient care and awareness.",
-                id: "Aplikasi kesehatan khusus untuk pemantauan dan edukasi stroke, yang bertujuan untuk meningkatkan perawatan dan kesadaran pasien."
+                en: "A health companion for stroke survivors. Designed the mobile interface and developed the application for presentation purposes.",
+                id: "Pendamping kesehatan untuk penyintas stroke. Mendesain antarmuka mobile dan mengembangkan aplikasi untuk kebutuhan presentasi."
             },
             overview: {
-                en: "A mobile health companion for stroke survivors and their caregivers, providing tracking tools, medication reminders, and educational content.",
-                id: "Pendamping kesehatan mobile untuk penyintas stroke dan pengasuh mereka, menyediakan alat pelacakan, pengingat obat, dan konten edukatif."
+                en: "Built as a high-fidelity prototype for project presentations, focusing on UI design and core feature coding for stroke monitoring and reminders.",
+                id: "Dibangun sebagai prototipe high-fidelity untuk presentasi proyek, berfokus pada desain UI dan pengkodean fitur inti untuk pemantauan stroke dan pengingat."
             },
             role: {
-                en: "Lead Developer. Designed the mobile UI and implemented the health tracking algorithms.",
-                id: "Lead Developer. Mendesain UI mobile dan mengimplementasikan algoritma pelacakan kesehatan."
+                en: "Mobile Developer & UI Designer. Designed the application interface and implemented core features for project exhibition.",
+                id: "Pengembang Mobile & Desainer UI. Mendesain antarmuka aplikasi dan mengimplementasikan fitur inti untuk eksibisi proyek."
             },
             features: {
-                en: ["Health Tracking", "Medication Reminders", "Emergency Alerts", "Educational Library"],
-                id: ["Pelacakan Kesehatan", "Pengingat Obat", "Peringatan Darurat", "Perpustakaan Edukasi"]
+                en: ["Health UI Design", "Mobile Prototyping", "Medication Tracking", "Educational Content"],
+                id: ["Desain UI Kesehatan", "Prototyping Mobile", "Pelacakan Obat", "Konten Edukatif"]
             },
-            stack: ["Mobile Development", "Health Tech"],
+            stack: ["Android Studio", "UI/UX Design", "Mobile Development"],
             type: "Mobile App",
             image: "/stroko1.png",
             screenshots: ["/stroko1.png"],
@@ -389,22 +389,22 @@ export const cvData = {
         {
             title: "Vehicle Visitor Recognition",
             description: {
-                en: "An electronic recognition system for vehicle visitors using Python and Machine Learning, developed during internship at SETJEN DPR RI.",
-                id: "Sistem rekognisi elektronik untuk pengunjung kendaraan menggunakan Python dan Machine Learning, dikembangkan selama magang di SETJEN DPR RI."
+                en: "Junior Programmer for vehicle exit-entry recognition system. Supported the programming and simple UI design tasks.",
+                id: "Programmer Junior untuk sistem rekognisi masuk-keluar kendaraan. Mendukung pemrograman dan tugas desain UI sederhana."
             },
-            stack: ["Python", "Machine Learning"],
             overview: {
-                en: "An automated security system for tracking vehicle entry and exit using plate recognition and driver face identification.",
-                id: "Sistem keamanan otomatis untuk melacak masuk dan keluar kendaraan menggunakan pengenalan plat dan identifikasi wajah driver."
+                en: "Assisted the development team by implementing programming logic and helping with the visual design of the recognition dashboard.",
+                id: "Membantu tim pengembangan dengan mengimplementasikan logika pemrograman dan membantu desain visual dashboard rekognisi."
             },
             role: {
-                en: "Machine Learning Intern. Trained the OCR model for license plates.",
-                id: "Magang Machine Learning. Melatih model OCR untuk plat nomor."
+                en: "Junior Programmer & UI Assistant. Assisted in programming tasks and dashboard UI layout design.",
+                id: "Programmer Junior & UI Assistant. Membantu tugas pemrograman dan desain layout UI dashboard."
             },
             features: {
-                en: ["License Plate Recognition", "Driver Identification", "Entry Logging", "Real-time Alerts"],
-                id: ["Pengenalan Plat Nomor", "Identifikasi Driver", "Pencatatan Masuk", "Peringatan Real-time"]
+                en: ["Dashboard Design", "Programming Logic", "Vehicle Entry Tracking"],
+                id: ["Desain Dashboard", "Logika Pemrograman", "Pelacakan Masuk Kendaraan"]
             },
+            stack: ["Python", "UI Design Implementation"],
             type: "Software System",
             image: "",
             screenshots: [],
@@ -414,22 +414,22 @@ export const cvData = {
         {
             title: "3D Map Plans",
             description: {
-                en: "Interactive 3D map plans for architectural visualization and navigation, built using Unity and C#.",
-                id: "Rencana peta 3D interaktif untuk visualisasi arsitektur dan navigasi, dibangun menggunakan Unity dan C#."
+                en: "3D modeling project for building navigation. Modeled architectural structures using Blender for Unity integration.",
+                id: "Proyek modeling 3D untuk navigasi gedung. Memodelkan struktur arsitektur menggunakan Blender untuk integrasi Unity."
             },
             overview: {
-                en: "An immersive 3D navigation tool for visualizing large buildings and complexes, designed for both desktop and mobile devices.",
-                id: "Alat navigasi 3D imersif untuk memvisualisasikan gedung dan kompleks besar, dirancang untuk perangkat desktop dan mobile."
+                en: "Contributed as a 3D modeler by creating detailed architectural buildings in Blender and collaborating on their integration into a Unity-based 3D environment.",
+                id: "Berkontribusi sebagai modeler 3D dengan membuat gedung arsitektur mendetail di Blender dan berkolaborasi dalam integrasi ke lingkungan 3D berbasis Unity."
             },
             role: {
-                en: "3D Developer. Built the navigation system and optimized the 3D assets.",
-                id: "Pengembang 3D. Membangun sistem navigasi dan mengoptimalkan aset 3D."
+                en: "3D Modeler & unity Developer. Created architectural assets in Blender and integrated them into the navigation project.",
+                id: "3D Modeler & Pengembang Unity. Membuat aset arsitektur di Blender dan mengintegrasikannya ke proyek navigasi."
             },
             features: {
-                en: ["Interactive Navigation", "Architectural Visualization", "Optimized Assets", "Cross-platform Support"],
-                id: ["Navigasi Interaktif", "Visualisasi Arsitektur", "Aset Teroptimasi", "Dukungan Cross-platform"]
+                en: ["Blender 3D Modeling", "Unity Integration", "Architectural Visualization"],
+                id: ["Modeling 3D Blender", "Integrasi Unity", "Visualisasi Arsitektur"]
             },
-            stack: ["Unity", "C#"],
+            stack: ["Blender", "Unity", "3D Modeling"],
             type: "3D Application",
             image: "",
             screenshots: [],

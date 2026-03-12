@@ -34,13 +34,6 @@ const Navbar = () => {
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass-card py-3 shadow-lg' : 'bg-transparent py-5'
                 }`}
         >
-            {/* Scroll Progress Bar */}
-            <motion.div
-                className="absolute top-0 left-0 right-0 h-1 bg-premium-blue origin-left z-10"
-                style={{
-                    scaleX: scrolled ? (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) : 0
-                }}
-            />
 
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <motion.div

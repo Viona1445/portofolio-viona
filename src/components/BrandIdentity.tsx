@@ -20,10 +20,10 @@ const BrandIdentity = () => {
                         {i18n.language === 'en' ? 'Brand Identity' : 'Identitas Merek'}
                     </motion.h2>
                     <div className="w-20 h-1 bg-premium-blue mx-auto rounded-full mb-6" />
-                    <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+                    <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
                         {i18n.language === 'en'
-                            ? "A collection of logo designs I've crafted using Figma, focusing on minimalism, meaning, and modern aesthetics."
-                            : "Koleksi desain logo yang saya buat menggunakan Figma, berfokus pada minimalisme, makna, dan estetika modern."}
+                            ? "I'm not a professional logo designer, but I occasionally help teams craft visual identities when needed. Here are some of the design works I've contributed to."
+                            : "Saya bukan desainer logo profesional, namun sesekali saya membantu tim dalam merancang identitas visual saat dibutuhkan. Berikut adalah beberapa karya desain yang pernah saya buat."}
                     </p>
                 </div>
 
