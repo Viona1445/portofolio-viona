@@ -72,7 +72,7 @@ export const cvData = {
                 ]
             },
             proof: "https://www.instagram.com/rivoltatech/",
-            moments: ["/rivolta1.png", "/rivolta2.png", "/rivolta3.png", "/rivolta4.png", "/rivolta5.png", "/rivolta6.png"]
+            moments: ["/rivolta1.png", "/rivolta2.png", "/rivolta3.png"]
         },
         {
             company: "SETJEN DPR RI",
@@ -94,7 +94,7 @@ export const cvData = {
                 ]
             },
             proof: "https://www.instagram.com/p/C77xOcXyyFC/",
-            moments: ["/dpr1.png", "/dpr2.png", "/dpr3.png", "/dpr4.png", "/dpr5.png", "/dpr6.png", "/dpr7.png"]
+            moments: ["/dpr1.png", "/dpr2.png", "/dpr3.png"]
         },
         {
             company: "Bangkit Academy by Google, GoTo, Traveloka",
