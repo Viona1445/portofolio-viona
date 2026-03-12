@@ -63,7 +63,7 @@ const Hero = () => {
                         {cvData.personalInfo.about[currentLang]}
                     </p>
 
-                    <div className="flex flex-wrap gap-4 pt-4">
+                    <div className="flex flex-wrap gap-4 pt-4 mb-8">
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -85,6 +85,7 @@ const Hero = () => {
                             <span>{i18n.language === 'en' ? 'Download CV' : 'Unduh CV'}</span>
                         </motion.a>
                     </div>
+
                 </motion.div>
 
                 <motion.div

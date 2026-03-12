@@ -149,13 +149,59 @@ export const cvData = {
         }
     ],
     skills: {
-        technical: ["Android Development (Kotlin)", "iOS Development (Swift/Xcode)", "React.js", "Node.js (Express)", "Python", "Machine Learning", "Unity", "REST API", "MongoDB", "MySQL", "PostgreSQL", "Docker", "Git"],
-        tools: ["Android Studio", "Xcode", "VS Code", "Cursor", "Figma", "Canva", "Firebase"],
+        categories: [
+            {
+                name: { en: "Mobile Development", id: "Pengembangan Mobile" },
+                skills: ["Android (Kotlin/Jetpack Compose)", "iOS (Swift/SwiftUI)", "App Store Deployment", "iOS Integration", "Xcode", "Android Studio"]
+            },
+            {
+                name: { en: "Web Development", id: "Pengembangan Web" },
+                skills: ["React.js", "Node.js (Express)", "Tailwind CSS", "HTML5/CSS3", "JavaScript/TypeScript"]
+            },
+            {
+                name: { en: "Backend & Systems", id: "Backend & Sistem" },
+                skills: ["Machine Learning (Python)", "Database (PostgreSQL, MySQL, MongoDB)", "REST API", "Docker", "Git"]
+            },
+            {
+                name: { en: "Design & Tools", id: "Desain & Alat" },
+                skills: ["Figma", "Canva", "Unity (C#)", "VS Code", "Firebase"]
+            }
+        ],
         soft: {
             en: ["Leadership", "Teamwork", "Problem Solving", "Critical Thinking", "Professional Communication"],
             id: ["Kepemimpinan", "Kerja Tim", "Penyelesaian Masalah", "Berpikir Kritis", "Komunikasi Profesional"]
         }
     },
+    certificates: [
+        {
+            name: "Bangkit Academy Graduate 2023",
+            issuer: "Google, GoTo, Traveloka",
+            date: "Dec 2023",
+            icon: "Award"
+        },
+        {
+            name: "Belajar Membuat Aplikasi Android untuk Pemula",
+            issuer: "Dicoding Indonesia",
+            date: "2023",
+            icon: "Smartphone"
+        },
+        {
+            name: "Belajar Dasar Pemrograman Web",
+            issuer: "Dicoding Indonesia",
+            date: "2023",
+            icon: "Globe"
+        }
+    ],
+    achievements: [
+        {
+            title: { en: "GPA 3.87", id: "IPK 3.87" },
+            description: { en: "Academic excellence in Informatics Engineering", id: "Keunggulan akademik di Teknik Informatika" }
+        },
+        {
+            title: { en: "Lead Mobile Developer", id: "Lead Mobile Developer" },
+            description: { en: "Successful Solvex app deployment to App Store", id: "Deployment sukses aplikasi Solvex ke App Store" }
+        }
+    ],
     projects: [
         {
             title: "Rivolta Solusi Teknologi",
@@ -163,11 +209,24 @@ export const cvData = {
                 en: "Official company website for Rivolta Solusi Teknologi. Implemented an AI-powered chatbot to enhance user interaction and support.",
                 id: "Website resmi perusahaan untuk Rivolta Solusi Teknologi. Mengimplementasikan chatbot bertenaga AI untuk meningkatkan interaksi dan dukungan pengguna."
             },
+            overview: {
+                en: "A comprehensive company website designed to showcase Rivolta's services, team, and projects. The highlight is a custom-trained AI chatbot that assists visitors.",
+                id: "Website perusahaan komprehensif yang dirancang untuk memamerkan layanan, tim, dan proyek Rivolta. Unggulannya adalah chatbot AI yang dilatih khusus untuk membantu pengunjung."
+            },
+            role: {
+                en: "Fullstack Developer & AI Integration Specialist. Built the frontend using React and integrated the AI backend.",
+                id: "Fullstack Developer & Spesialis Integrasi AI. Membangun frontend menggunakan React dan mengintegrasikan backend AI."
+            },
+            features: {
+                en: ["AI-Powered Chatbot", "Responsive Design", "Multilingual Support", "Service Catalog"],
+                id: ["Chatbot Berbasis AI", "Desain Responsif", "Dukungan Multi-bahasa", "Katalog Layanan"]
+            },
             stack: ["React", "AI Integration", "Tailwind CSS"],
             type: "Website",
-            image: "/projects/rivolta.jpg",
+            image: "/rivoltawebsite1.png",
+            screenshots: ["/rivoltawebsite1.png", "/rivoltawebsite2.png", "/rivoltawebsite3.png"],
             url: "https://rivoltatech.com/id",
-            github: ""
+            github: "",
         },
         {
             title: "ShipHire",
@@ -175,11 +234,24 @@ export const cvData = {
                 en: "A comprehensive boat rental and management platform for business. Streamlines the process for both providers and customers with category-based ship recommendations.",
                 id: "Platform penyewaan dan manajemen kapal yang komprehensif untuk bisnis. Merampingkan proses baik untuk penyedia maupun pelanggan dengan rekomendasi kapal berbasis kategori."
             },
+            overview: {
+                en: "A dual-interface platform for ship owners and renters. Includes real-time booking, automated invoicing, and a sophisticated categorization system.",
+                id: "Platform antarmuka ganda untuk pemilik kapal dan penyewa. Mencakup pemesanan real-time, penagihan otomatis, dan sistem kategorisasi yang canggih."
+            },
+            role: {
+                en: "Lead Developer. Handled the backend architecture and core booking logic.",
+                id: "Lead Developer. Menangani arsitektur backend dan logika pemesanan inti."
+            },
+            features: {
+                en: ["Real-time Booking", "Automated Invoicing", "Owner Dashboard", "Ship Categorization"],
+                id: ["Pemesanan Real-time", "Penagihan Otomatis", "Dashboard Pemilik", "Kategorisasi Kapal"]
+            },
             stack: ["React", "Express", "PostgreSQL", "Business"],
             type: "Mobile App",
-            image: "/projects/shiphire.jpg",
+            image: "/shiphireapp1.png",
+            screenshots: ["/shiphireapp1.png"],
             url: "https://shiphire.id/",
-            github: ""
+            github: "",
         },
         {
             title: "Trace Report",
@@ -187,11 +259,24 @@ export const cvData = {
                 en: "Official delivery tracking and reporting application for Rivolta Solusi Teknologi. Features optimized trace accuracy and enhanced reliability for real-world business challenges.",
                 id: "Aplikasi pelacakan pengiriman dan pelaporan resmi untuk Rivolta Solusi Teknologi. Menampilkan akurasi pelacakan yang dioptimalkan dan peningkatan keandalan untuk tantangan bisnis nyata."
             },
+            overview: {
+                en: "A robust logistics tool for monitoring deliveries in real-time. It provides detailed analytics and instant notifications for delivery status changes.",
+                id: "Alat logistik yang kuat untuk memantau pengiriman secara real-time. Ini menyediakan analitik terperinci dan notifikasi instan untuk perubahan status pengiriman."
+            },
+            role: {
+                en: "Mobile App Developer. Focused on performance optimization and GPS tracking accuracy.",
+                id: "Pengembang Aplikasi Mobile. Berfokus pada optimasi performa dan akurasi pelacakan GPS."
+            },
+            features: {
+                en: ["Live GPS Tracking", "Status Notifications", "Delivery Analytics", "Offline Support"],
+                id: ["Pelacakan GPS Langsung", "Notifikasi Status", "Analitik Pengiriman", "Dukungan Offline"]
+            },
             stack: ["Mobile Development", "Optimization", "Business"],
             type: "Mobile App",
-            image: "/projects/tracereport.jpg",
+            image: "/tracereport1.png",
+            screenshots: ["/tracereport1.png", "/tracereport2.png", "/tracereport3.png"],
             url: "https://tracereport.id/",
-            github: ""
+            github: "",
         },
         {
             title: "Synvero",
@@ -199,11 +284,28 @@ export const cvData = {
                 en: "Collaborated on the development and maintenance of the Synvero platform, focusing on performance and user experience.",
                 id: "Berkolaborasi dalam pengembangan dan pemeliharaan platform Synvero, fokus pada performa dan pengalaman pengguna."
             },
+            overview: {
+                en: "A versatile meeting and communication platform designed for corporate use. Features high-quality video conferencing and collaborative tools.",
+                id: "Platform pertemuan dan komunikasi serbaguna yang dirancang untuk penggunaan korporat. Menampilkan konferensi video berkualitas tinggi dan alat kolaboratif."
+            },
+            role: {
+                en: "Frontend Developer. Implemented modern UI components and ensured cross-browser compatibility.",
+                id: "Frontend Developer. Mengimplementasikan komponen UI modern dan memastikan kompatibilitas lintas browser."
+            },
+            features: {
+                en: ["HD Video Conferencing", "Screen Sharing", "Whiteboard Collaboration", "Real-time Chat"],
+                id: ["Konferensi Video HD", "Berbagi Layar", "Kolaborasi Whiteboard", "Chat Real-time"]
+            },
             stack: ["React", "Web Development", "UI/UX"],
             type: "Website",
-            image: "/projects/synvero.jpg",
+            image: "/synvero1.png",
+            screenshots: ["/synvero1.png"],
             url: "",
-            github: ""
+            github: "",
+            notes: {
+                en: "This project is part of an internal system and the live demo is not publicly available.",
+                id: "Proyek ini adalah bagian dari sistem internal dan demo langsung tidak tersedia secara publik."
+            },
         },
         {
             title: "RivoBooth",
@@ -211,11 +313,28 @@ export const cvData = {
                 en: "A modern photobooth application developed for Synvero/Rivolta, featuring real-time image processing and social sharing.",
                 id: "Aplikasi photobooth modern yang dikembangkan untuk Synvero/Rivolta, menampilkan pemrosesan gambar real-time dan berbagi sosial."
             },
+            overview: {
+                en: "An interactive photobooth experience with customizable filters, frames, and instant digital delivery via QR codes.",
+                id: "Pengalaman photobooth interaktif dengan filter yang dapat disesuaikan, bingkai, dan pengiriman digital instan via kode QR."
+            },
+            role: {
+                en: "Software Engineer. Developed the real-time image filter engine and integrated the sharing APIs.",
+                id: "Software Engineer. Mengembangkan mesin filter gambar real-time dan mengintegrasikan API berbagi."
+            },
+            features: {
+                en: ["Custom Frames", "AI Background Removal", "QR Code Sharing", "Instant Print"],
+                id: ["Bingkai Kustom", "Penghapusan Background AI", "Berbagi Kode QR", "Cetak Instan"]
+            },
             stack: ["React", "Node.js", "Image Processing"],
             type: "Web App",
-            image: "/projects/rivobooth.jpg",
+            image: "/photobooth1.png",
+            screenshots: ["/photobooth1.png", "/photobooth2.png", "/photobooth3.png"],
             url: "",
-            github: ""
+            github: "",
+            notes: {
+                en: "This project is part of an internal system and the live demo is not publicly available.",
+                id: "Proyek ini adalah bagian dari sistem internal dan demo langsung tidak tersedia secara publik."
+            },
         },
         {
             title: "Solvex",
@@ -223,11 +342,24 @@ export const cvData = {
                 en: "A professional Q&A application 'Solve Anything' featuring advanced AI integrations and successfully deployed to the Apple App Store for expert consultations.",
                 id: "Aplikasi tanya jawab profesional 'Solve Anything' yang menampilkan integrasi AI tingkat lanjut dan berhasil dideploy ke Apple App Store untuk konsultasi ahli."
             },
+            overview: {
+                en: "A marketplace for expertise where users can ask complex questions and get answers from verified experts, powered by AI for initial triage.",
+                id: "Marketplace keahlian di mana pengguna dapat mengajukan pertanyaan kompleks dan mendapatkan jawaban dari ahli terverifikasi, didukung oleh AI untuk triase awal."
+            },
+            role: {
+                en: "iOS & Backend Developer. Managed the App Store submission process and built the expert verification system.",
+                id: "Pengembang iOS & Backend. Mengelola proses submit App Store dan membangun sistem verifikasi ahli."
+            },
+            features: {
+                en: ["Expert Verification", "In-app Messaging", "Payment Integration", "AI Search"],
+                id: ["Verifikasi Ahli", "Pesan Dalam Aplikasi", "Integrasi Pembayaran", "Pencarian AI"]
+            },
             stack: ["Android Studio", "iOS", "App Store Deployment", "AI Integration"],
             type: "Mobile App",
-            image: "/projects/solvex.jpg",
+            image: "/solvex1.png",
+            screenshots: ["/solvex1.png", "/solvex2.png"],
             url: "",
-            github: ""
+            github: "",
         },
         {
             title: "Stroko",
@@ -235,11 +367,24 @@ export const cvData = {
                 en: "A specialized health application for stroke monitoring and education, aimed at improving patient care and awareness.",
                 id: "Aplikasi kesehatan khusus untuk pemantauan dan edukasi stroke, yang bertujuan untuk meningkatkan perawatan dan kesadaran pasien."
             },
+            overview: {
+                en: "A mobile health companion for stroke survivors and their caregivers, providing tracking tools, medication reminders, and educational content.",
+                id: "Pendamping kesehatan mobile untuk penyintas stroke dan pengasuh mereka, menyediakan alat pelacakan, pengingat obat, dan konten edukatif."
+            },
+            role: {
+                en: "Lead Developer. Designed the mobile UI and implemented the health tracking algorithms.",
+                id: "Lead Developer. Mendesain UI mobile dan mengimplementasikan algoritma pelacakan kesehatan."
+            },
+            features: {
+                en: ["Health Tracking", "Medication Reminders", "Emergency Alerts", "Educational Library"],
+                id: ["Pelacakan Kesehatan", "Pengingat Obat", "Peringatan Darurat", "Perpustakaan Edukasi"]
+            },
             stack: ["Mobile Development", "Health Tech"],
             type: "Mobile App",
-            image: "/projects/stroko.jpg",
+            image: "/stroko1.png",
+            screenshots: ["/stroko1.png"],
             url: "https://youtu.be/JtTqD6kv9VI?si=Xe5VfmXjlFb5X7Y5",
-            github: ""
+            github: "",
         },
         {
             title: "Vehicle Visitor Recognition",
@@ -248,10 +393,23 @@ export const cvData = {
                 id: "Sistem rekognisi elektronik untuk pengunjung kendaraan menggunakan Python dan Machine Learning, dikembangkan selama magang di SETJEN DPR RI."
             },
             stack: ["Python", "Machine Learning"],
+            overview: {
+                en: "An automated security system for tracking vehicle entry and exit using plate recognition and driver face identification.",
+                id: "Sistem keamanan otomatis untuk melacak masuk dan keluar kendaraan menggunakan pengenalan plat dan identifikasi wajah driver."
+            },
+            role: {
+                en: "Machine Learning Intern. Trained the OCR model for license plates.",
+                id: "Magang Machine Learning. Melatih model OCR untuk plat nomor."
+            },
+            features: {
+                en: ["License Plate Recognition", "Driver Identification", "Entry Logging", "Real-time Alerts"],
+                id: ["Pengenalan Plat Nomor", "Identifikasi Driver", "Pencatatan Masuk", "Peringatan Real-time"]
+            },
             type: "Software System",
-            image: "/projects/vehicle-recognition.jpg",
+            image: "",
+            screenshots: [],
             url: "",
-            github: ""
+            github: "",
         },
         {
             title: "3D Map Plans",
@@ -259,11 +417,24 @@ export const cvData = {
                 en: "Interactive 3D map plans for architectural visualization and navigation, built using Unity and C#.",
                 id: "Rencana peta 3D interaktif untuk visualisasi arsitektur dan navigasi, dibangun menggunakan Unity dan C#."
             },
+            overview: {
+                en: "An immersive 3D navigation tool for visualizing large buildings and complexes, designed for both desktop and mobile devices.",
+                id: "Alat navigasi 3D imersif untuk memvisualisasikan gedung dan kompleks besar, dirancang untuk perangkat desktop dan mobile."
+            },
+            role: {
+                en: "3D Developer. Built the navigation system and optimized the 3D assets.",
+                id: "Pengembang 3D. Membangun sistem navigasi dan mengoptimalkan aset 3D."
+            },
+            features: {
+                en: ["Interactive Navigation", "Architectural Visualization", "Optimized Assets", "Cross-platform Support"],
+                id: ["Navigasi Interaktif", "Visualisasi Arsitektur", "Aset Teroptimasi", "Dukungan Cross-platform"]
+            },
             stack: ["Unity", "C#"],
             type: "3D Application",
-            image: "/projects/3d-map.jpg",
+            image: "",
+            screenshots: [],
             url: "",
-            github: ""
+            github: "",
         }
     ],
     logos: [

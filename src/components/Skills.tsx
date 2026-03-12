@@ -1,32 +1,31 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { cvData } from '../data/cvData';
-import { Code2, PenTool, Lightbulb } from 'lucide-react';
+import { Code2, PenTool, Lightbulb, Smartphone, Database } from 'lucide-react';
 
 const Skills = () => {
     const { i18n } = useTranslation();
     const currentLang = i18n.language as 'en' | 'id';
 
-    const skillGroups = [
-        {
-            title: i18n.language === 'en' ? 'Technical Skills' : 'Keahlian Teknis',
-            icon: Code2,
-            items: cvData.skills.technical,
-            color: 'from-blue-600 to-cyan-500'
-        },
-        {
-            title: i18n.language === 'en' ? 'Tools & Platforms' : 'Peralatan & Platform',
-            icon: PenTool,
-            items: cvData.skills.tools,
-            color: 'from-purple-600 to-pink-500'
-        },
-        {
-            title: i18n.language === 'en' ? 'Soft Skills' : 'Keahlian Intrapersonal',
-            icon: Lightbulb,
-            items: cvData.skills.soft[currentLang],
-            color: 'from-orange-600 to-yellow-500'
-        },
-    ];
+    const skillGroups = cvData.skills.categories.map((cat, idx) => ({
+        title: cat.name[currentLang],
+        icon: [Code2, Smartphone, Database, PenTool][idx % 4],
+        items: cat.skills,
+        color: [
+            'from-blue-600 to-cyan-500',
+            'from-purple-600 to-pink-500',
+            'from-emerald-600 to-teal-500',
+            'from-orange-600 to-yellow-500'
+        ][idx % 4]
+    }));
+
+    // Add Soft Skills as a group
+    skillGroups.push({
+        title: currentLang === 'en' ? 'Soft Skills' : 'Keahlian Intrapersonal',
+        icon: Lightbulb,
+        items: cvData.skills.soft[currentLang],
+        color: 'from-amber-500 to-orange-400'
+    });
 
     return (
         <section id="skills" className="py-24 relative overflow-hidden">
@@ -47,21 +46,23 @@ const Skills = () => {
                     {skillGroups.map((group, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: idx * 0.1 }}
-                            className="glass-card p-8 rounded-3xl border border-white/5"
+                            transition={{ duration: 0.5, delay: idx * 0.1 }}
+                            className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/[0.07] transition-all"
                         >
-                            <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${group.color} flex items-center justify-center mb-6 shadow-xl`}>
-                                <group.icon className="w-7 h-7 text-white" />
+                            <div className="flex items-center gap-4 mb-5">
+                                <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${group.color} flex items-center justify-center shadow-lg shrink-0`}>
+                                    <group.icon className="w-5 h-5 text-white" />
+                                </div>
+                                <h3 className="text-sm font-bold text-white uppercase tracking-wider">{group.title}</h3>
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-widest text-sm">{group.title}</h3>
-                            <div className="flex flex-wrap gap-3">
+                            <div className="flex flex-wrap gap-2">
                                 {group.items.map((skill, i) => (
                                     <span
                                         key={i}
-                                        className="px-4 py-2 bg-white/5 hover:bg-premium-blue/20 hover:text-white text-slate-400 text-sm font-medium rounded-xl transition-all border border-white/5"
+                                        className="px-3 py-1.5 bg-navy-900/50 text-slate-400 text-xs font-medium rounded-lg border border-white/5"
                                     >
                                         {skill}
                                     </span>
