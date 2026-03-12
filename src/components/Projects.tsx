@@ -12,9 +12,6 @@ const Projects = () => {
 
     return (
         <section id="projects" className="py-24 bg-navy-950/50 relative overflow-hidden">
-            {/* Background Accent */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-premium-blue/5 rounded-full blur-[120px] -z-10" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/5 rounded-full blur-[120px] -z-10" />
 
             <div className="max-w-7xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -46,7 +43,7 @@ const Projects = () => {
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
                             className="group"
                         >
-                            <div className="glass-card h-full rounded-[40px] overflow-hidden border border-white/5 hover:border-premium-blue/30 transition-all duration-500 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] flex flex-col">
+                            <div className="bg-navy-900/40 h-full rounded-[40px] overflow-hidden border border-white/5 hover:border-premium-blue/20 transition-colors duration-300 flex flex-col">
                                 {/* Project Image Container */}
                                 <div className="h-64 bg-gradient-to-br from-navy-800 to-navy-950 relative overflow-hidden shrink-0">
                                     {project.image ? (

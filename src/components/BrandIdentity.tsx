@@ -43,7 +43,7 @@ const BrandIdentity = () => {
                             transition={{ delay: idx * 0.1 }}
                             className="group perspective-1000"
                         >
-                            <div className="glass-card p-8 rounded-[32px] border border-white/5 hover:border-premium-blue/30 transition-all duration-500 h-full flex flex-col items-center hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]">
+                            <div className="bg-navy-900/40 p-8 rounded-[32px] border border-white/5 hover:border-premium-blue/20 transition-colors h-full flex flex-col items-center">
                                 <div className="w-full aspect-square bg-navy-900/50 rounded-2xl flex items-center justify-center mb-6 overflow-hidden p-6 border border-white/5 group-hover:border-premium-blue/20 transition-all">
                                     <motion.img
                                         whileHover={{ scale: 1.15 }}

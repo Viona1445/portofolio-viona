@@ -42,7 +42,7 @@ const Experience = () => {
 
                             {/* Content Card container */}
                             <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${idx % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                                <div className="glass-card p-6 md:p-8 rounded-3xl border border-white/5 hover:border-premium-blue/30 transition-all hover:shadow-2xl">
+                                <div className="bg-navy-900/40 p-6 md:p-8 rounded-3xl border border-white/5 hover:border-premium-blue/20 transition-colors">
                                     <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
                                         <span className="px-4 py-1.5 bg-premium-blue/10 text-premium-blue text-[10px] font-bold rounded-lg uppercase tracking-widest border border-premium-blue/20">
                                             {exp.role}
