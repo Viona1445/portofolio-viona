@@ -43,7 +43,7 @@ const Navbar = () => {
                 >
                     {/* Full logo (Desktop) */}
                     <div className="hidden md:block text-2xl font-bold tracking-tighter text-white">
-                        VIONA<span className="text-premium-blue text-glow">.</span>
+                        VIONA<span className="text-premium-pink text-glow">.</span>
                     </div>
                     {/* Mini logo (Mobile) */}
                     <div className="md:hidden">
@@ -61,7 +61,7 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-slate-300 hover:text-premium-blue transition-colors"
+                            className="text-sm font-medium text-slate-300 hover:text-premium-pink transition-colors"
                         >
                             {link.name}
                         </a>
@@ -70,12 +70,12 @@ const Navbar = () => {
                         onClick={toggleLanguage}
                         className="p-2 rounded-full hover:bg-white/10 transition-colors flex items-center space-x-2"
                     >
-                        <Globe className="w-4 h-4 text-premium-blue" />
+                        <Globe className="w-4 h-4 text-premium-pink" />
                         <span className="text-xs uppercase font-bold">{i18n.language}</span>
                     </button>
                     <a
                         href="#contact"
-                        className="px-6 py-2 bg-premium-blue hover:bg-blue-600 text-white rounded-full text-sm font-semibold premium-glow transition-all hover:scale-105"
+                        className="px-6 py-2 bg-premium-pink hover:bg-blue-600 text-white rounded-full text-sm font-semibold premium-glow transition-all hover:scale-105"
                     >
                         {i18n.language === 'en' ? 'Hire Me' : 'Hubungi Saya'}
                     </a>
@@ -84,7 +84,7 @@ const Navbar = () => {
                 {/* Mobile Toggle */}
                 <div className="md:hidden flex items-center space-x-4">
                     <button onClick={toggleLanguage} className="p-2">
-                        <Globe className="w-5 h-5 text-premium-blue" />
+                        <Globe className="w-5 h-5 text-premium-pink" />
                     </button>
                     <button onClick={() => setIsOpen(!isOpen)} className="text-white">
                         {isOpen ? <X /> : <Menu />}
@@ -107,7 +107,7 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-lg font-medium text-slate-300 hover:text-premium-blue"
+                                    className="text-lg font-medium text-slate-300 hover:text-premium-pink"
                                 >
                                     {link.name}
                                 </a>
@@ -115,7 +115,7 @@ const Navbar = () => {
                             <a
                                 href="#contact"
                                 onClick={() => setIsOpen(false)}
-                                className="w-full py-3 bg-premium-blue text-center text-white rounded-xl font-bold"
+                                className="w-full py-3 bg-premium-pink text-center text-white rounded-xl font-bold"
                             >
                                 {i18n.language === 'en' ? 'Hire Me' : 'Hubungi Saya'}
                             </a>

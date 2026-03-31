@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="py-12 border-t border-white/5">
             <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
                 <div className="text-2xl font-bold tracking-tighter text-white mb-6">
-                    VIONA<span className="text-premium-blue text-glow">.</span>
+                    VIONA<span className="text-premium-pink text-glow">.</span>
                 </div>
 
                 <p className="text-slate-500 text-sm mb-8 text-center max-w-md">

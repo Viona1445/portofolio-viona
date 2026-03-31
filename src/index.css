@@ -4,8 +4,8 @@
   --color-navy-800: #1e293b;
   --color-navy-900: #0f172a;
   --color-navy-950: #020617;
-  --color-premium-blue: #3b82f6;
-  --color-premium-glow: #60a5fa;
+  --color-premium-pink: #ec4899;
+  --color-premium-glow: #f472b6;
 
   --animate-glow-pulse: glow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
@@ -25,7 +25,7 @@
 }
 
 :root {
-  --glow-blue: #3b82f6;
+  --glow-pink: #ec4899;
   --bg-deep: #020617;
 }
 
@@ -39,13 +39,12 @@ body {
 
 @layer components {
   .premium-glow {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
   }
 
   .glass-card {
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(6px);
-    /* Reduced from 12px for better performance */
+    background: rgba(15, 23, 42, 0.9);
+    /* backdrop-filter removed for significantly better scroll performance */
     border: 1px solid rgba(255, 255, 255, 0.05);
   }
 
@@ -55,7 +54,7 @@ body {
   }
 
   .text-glow {
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
   }
 
   .perspective-1000 {

@@ -60,7 +60,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
                             {/* Project Type Badge */}
                             <div className="absolute bottom-6 left-8 flex items-center space-x-3">
-                                <div className="p-2 bg-premium-blue rounded-xl text-white">
+                                <div className="p-2 bg-premium-pink rounded-xl text-white">
                                     {project.type === 'Mobile App' ? <Smartphone size={20} /> : <Monitor size={20} />}
                                 </div>
                                 <span className="text-white text-sm font-black uppercase tracking-widest bg-navy-950/30 backdrop-blur-md px-3 py-1 rounded-full">
@@ -79,7 +79,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                                             {project.title}
                                         </h2>
                                         <div className="prose prose-invert max-w-none">
-                                            <h3 className="text-xl font-bold text-premium-blue mb-4 tracking-wide uppercase text-sm">
+                                            <h3 className="text-xl font-bold text-premium-pink mb-4 tracking-wide uppercase text-sm">
                                                 {currentLang === 'en' ? 'Project Overview' : 'Ikhtisar Proyek'}
                                             </h3>
                                             <p className="text-slate-300 text-lg leading-relaxed">
@@ -89,7 +89,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                                     </div>
 
                                     <div>
-                                        <h3 className="text-xl font-bold text-premium-blue mb-4 tracking-wide uppercase text-sm">
+                                        <h3 className="text-xl font-bold text-premium-pink mb-4 tracking-wide uppercase text-sm">
                                             {currentLang === 'en' ? 'My Role' : 'Peran Saya'}
                                         </h3>
                                         <p className="text-slate-400 leading-relaxed">
@@ -99,13 +99,13 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
                                     {project.features && (
                                         <div>
-                                            <h3 className="text-xl font-bold text-premium-blue mb-6 tracking-wide uppercase text-sm">
+                                            <h3 className="text-xl font-bold text-premium-pink mb-6 tracking-wide uppercase text-sm">
                                                 {currentLang === 'en' ? 'Key Features' : 'Fitur Utama'}
                                             </h3>
                                             <div className="grid sm:grid-cols-2 gap-4">
                                                 {project.features[currentLang].map((feature: string, i: number) => (
                                                     <div key={i} className="flex items-start space-x-3 group">
-                                                        <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-lg bg-premium-blue/10 flex items-center justify-center text-premium-blue group-hover:bg-premium-blue group-hover:text-white transition-all">
+                                                        <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-lg bg-premium-pink/10 flex items-center justify-center text-premium-pink group-hover:bg-premium-pink group-hover:text-white transition-all">
                                                             <ChevronRight size={14} />
                                                         </div>
                                                         <span className="text-slate-400 group-hover:text-white transition-colors">{feature}</span>
@@ -123,7 +123,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
                                     {project.screenshots && project.screenshots.length > 0 && (
                                         <div>
-                                            <h3 className="text-xl font-bold text-premium-blue mb-6 tracking-wide uppercase text-sm">
+                                            <h3 className="text-xl font-bold text-premium-pink mb-6 tracking-wide uppercase text-sm">
                                                 {currentLang === 'en' ? 'Project Gallery' : 'Galeri Proyek'}
                                             </h3>
                                             <div className="grid grid-cols-2 gap-4">
@@ -159,7 +159,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                                                     href={project.url}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="w-full py-4 bg-premium-blue text-white rounded-2xl font-bold flex items-center justify-center space-x-2 shadow-lg shadow-premium-blue/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                                                    className="w-full py-4 bg-premium-pink text-white rounded-2xl font-bold flex items-center justify-center space-x-2 shadow-lg shadow-premium-pink/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
                                                 >
                                                     <ExternalLink size={18} />
                                                     <span>Live Demo</span>

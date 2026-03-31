@@ -9,7 +9,7 @@ const Skills = () => {
 
     const skillGroups = cvData.skills.categories.map((cat, idx) => ({
         title: cat.name[currentLang],
-        icon: [Code2, Smartphone, Database, PenTool][idx % 4],
+        icon: [Smartphone, Code2, Database, PenTool][idx % 4],
         items: cat.skills,
         color: [
             'from-blue-600 to-cyan-500',
@@ -24,7 +24,7 @@ const Skills = () => {
         title: currentLang === 'en' ? 'Soft Skills' : 'Keahlian Intrapersonal',
         icon: Lightbulb,
         items: cvData.skills.soft[currentLang],
-        color: 'from-amber-500 to-orange-400'
+        color: 'from-pink-600 to-rose-500'
     });
 
     return (
@@ -39,10 +39,10 @@ const Skills = () => {
                     >
                         {i18n.language === 'en' ? 'My Toolkit' : 'Keahlian Saya'}
                     </motion.h2>
-                    <div className="w-20 h-1 bg-premium-blue mx-auto rounded-full" />
+                    <div className="w-20 h-1 bg-premium-pink mx-auto rounded-full" />
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
                     {skillGroups.map((group, idx) => (
                         <motion.div
                             key={idx}
@@ -50,7 +50,10 @@ const Skills = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
-                            className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/[0.07] transition-all"
+                            style={{ willChange: 'transform, opacity' }}
+                            className={`p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/[0.07] transition-all md:col-span-2 ${
+                                idx === 3 ? 'md:col-start-2' : ''
+                            }`}
                         >
                             <div className="flex items-center gap-4 mb-5">
                                 <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${group.color} flex items-center justify-center shadow-lg shrink-0`}>

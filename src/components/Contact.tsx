@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Facebook, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Facebook, Send, Loader2, CheckCircle2, XCircle } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -14,6 +14,14 @@ const Contact = () => {
         setStatus('idle');
 
         const formData = new FormData(e.currentTarget);
+        
+        const samarindaTime = new Date().toLocaleString('id-ID', { 
+            timeZone: 'Asia/Makassar', 
+            dateStyle: 'full', 
+            timeStyle: 'long' 
+        });
+        formData.append('Waktu_Pengiriman_Lokal', samarindaTime);
+
         const formId = import.meta.env.VITE_FORMSPREE_ID || "mqaejebz";
 
         try {
@@ -64,7 +72,7 @@ const Contact = () => {
                     >
                         {i18n.language === 'en' ? "Let's Connect" : 'Mari Terhubung'}
                     </motion.h2>
-                    <div className="w-20 h-1 bg-premium-blue mx-auto rounded-full" />
+                    <div className="w-20 h-1 bg-premium-pink mx-auto rounded-full" />
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-16">
@@ -85,8 +93,8 @@ const Contact = () => {
                         <div className="space-y-6">
                             {contactInfo.map((info, idx) => (
                                 <div key={idx} className="flex items-center space-x-6">
-                                    <div className="w-12 h-12 bg-premium-blue/10 rounded-2xl flex items-center justify-center border border-premium-blue/20">
-                                        <info.icon className="w-6 h-6 text-premium-blue" />
+                                    <div className="w-12 h-12 bg-premium-pink/10 rounded-2xl flex items-center justify-center border border-premium-pink/20">
+                                        <info.icon className="w-6 h-6 text-premium-pink" />
                                     </div>
                                     <div>
                                         <div className="text-slate-500 text-xs uppercase font-black tracking-widest mb-1">{info.label}</div>
@@ -95,7 +103,7 @@ const Contact = () => {
                                                 href={info.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-white font-bold hover:text-premium-blue transition-colors"
+                                                className="text-white font-bold hover:text-premium-pink transition-colors"
                                             >
                                                 {info.value}
                                             </a>
@@ -114,9 +122,9 @@ const Contact = () => {
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-12 h-12 glass-card rounded-2xl flex items-center justify-center border border-white/5 hover:border-premium-blue/50 group transition-all"
+                                    className="w-12 h-12 glass-card rounded-2xl flex items-center justify-center border border-white/5 hover:border-premium-pink/50 group transition-all"
                                 >
-                                    <social.icon className="w-5 h-5 text-slate-400 group-hover:text-premium-blue transition-colors" />
+                                    <social.icon className="w-5 h-5 text-slate-400 group-hover:text-premium-pink transition-colors" />
                                 </a>
                             ))}
                         </div>
@@ -137,7 +145,7 @@ const Contact = () => {
                                             required
                                             name="name"
                                             type="text"
-                                            className="w-full bg-navy-900 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-premium-blue/50 transition-all"
+                                            className="w-full bg-navy-900 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-premium-pink/50 transition-all"
                                             placeholder="Your Name"
                                         />
                                     </div>
@@ -147,9 +155,28 @@ const Contact = () => {
                                             required
                                             name="email"
                                             type="email"
-                                            className="w-full bg-navy-900 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-premium-blue/50 transition-all"
-                                            placeholder="viona@example.com"
+                                            className="w-full bg-navy-900 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-premium-pink/50 transition-all"
+                                            placeholder="vionaasya04@gmail.com"
                                         />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Subject</label>
+                                    <div className="relative">
+                                        <select
+                                            required
+                                            name="_subject"
+                                            className="w-full bg-navy-900 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-premium-pink/50 transition-all appearance-none cursor-pointer"
+                                            defaultValue="Job Opportunity"
+                                        >
+                                            <option value="Job Opportunity">Job Opportunity</option>
+                                            <option value="Project Collaboration">Project Collaboration</option>
+                                            <option value="General Inquiry">General Inquiry</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <div className="absolute inset-y-0 right-6 flex items-center pointer-events-none">
+                                            <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
@@ -158,7 +185,7 @@ const Contact = () => {
                                         required
                                         name="message"
                                         rows={5}
-                                        className="w-full bg-navy-900 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-premium-blue/50 transition-all resize-none"
+                                        className="w-full bg-navy-900 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-premium-pink/50 transition-all resize-none"
                                         placeholder="Tell me about your project..."
                                     />
                                 </div>
@@ -168,7 +195,7 @@ const Contact = () => {
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 disabled={loading}
-                                className="w-full py-5 bg-premium-blue text-white rounded-2xl font-bold shadow-lg premium-glow flex items-center justify-center space-x-3 disabled:opacity-50"
+                                className="w-full py-5 bg-premium-pink text-white rounded-2xl font-bold shadow-lg premium-glow flex items-center justify-center space-x-3 disabled:opacity-50"
                             >
                                 {loading ? (
                                     <Loader2 className="w-6 h-6 animate-spin" />
@@ -180,29 +207,32 @@ const Contact = () => {
                                 )}
                             </motion.button>
 
-                            {status === 'success' && (
-                                <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    className="text-center text-green-400 font-bold"
-                                >
-                                    {i18n.language === 'en' ? 'Message sent successfully!' : 'Pesan berhasil dikirim!'}
-                                </motion.div>
-                            )}
-
-                            {status === 'error' && (
-                                <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    className="text-center text-red-400 font-bold"
-                                >
-                                    {i18n.language === 'en' ? 'Failed to send message. Please try again.' : 'Gagal mengirim pesan. Silakan coba lagi.'}
-                                </motion.div>
-                            )}
                         </form>
                     </motion.div>
                 </div>
             </div>
+            
+            <AnimatePresence>
+                {status !== 'idle' && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                        className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center space-x-3 px-6 py-4 rounded-2xl shadow-2xl border ${
+                            status === 'success' 
+                                ? 'bg-navy-900 border-green-500/30 text-green-400'
+                                : 'bg-navy-900 border-red-500/30 text-red-400'
+                        }`}
+                    >
+                        {status === 'success' ? <CheckCircle2 className="w-6 h-6" /> : <XCircle className="w-6 h-6" />}
+                        <span className="font-bold">
+                            {status === 'success' 
+                                ? (i18n.language === 'en' ? 'Message sent successfully!' : 'Pesan berhasil dikirim!')
+                                : (i18n.language === 'en' ? 'Failed to send message. Please try again.' : 'Gagal mengirim pesan. Silakan coba lagi.')}
+                        </span>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };

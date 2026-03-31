@@ -139,6 +139,44 @@ export const cvData = {
             moments: ["/aslab1.png", "/aslab2.png"]
         }
     ],
+    organizations: [
+        {
+            name: "Association of Informatics",
+            role: "DPO | Vice Chairman",
+            period: "01/2022 – 12/2024",
+            location: "Samarinda, Indonesia",
+            highlights: {
+                en: [
+                    "Vice Chairman of DPO (Organization's supervisory board) in 2024.",
+                    "Chairman for Revatur 1 & 2 2024 (Annual Evaluation Meeting).",
+                    "Treasurer for MUBES 2023, Revatur 1 & 2 2023, and Steering Committee MIT Week 2023.",
+                    "Public Relations for ISO 2022 (Informatics Students Orientation)."
+                ],
+                id: [
+                    "Wakil Ketua DPO (Dewan Pengawas Organisasi) pada tahun 2024.",
+                    "Ketua Panitia untuk Revatur 1 & 2 2024 (Rapat Evaluasi Tahunan).",
+                    "Bendahara untuk MUBES 2023, Revatur 1 & 2 2023, dan Steering Committee MIT Week 2023.",
+                    "Divisi Humas untuk ISO 2022 (Orientasi Mahasiswa Informatika)."
+                ]
+            }
+        },
+        {
+            name: "Google Developer Student Club Mulawarman University",
+            role: "Core Team | Event",
+            period: "11/2023 – 11/2024",
+            location: "Samarinda, Indonesia",
+            highlights: {
+                en: [
+                    "Created and managed various events for GDSC members.",
+                    "Served as the Leader of the Event Core Team."
+                ],
+                id: [
+                    "Membangun dan mengelola berbagai acara untuk anggota GDSC.",
+                    "Bertugas sebagai Ketua (Leader) pada Tim Inti Event."
+                ]
+            }
+        }
+    ],
     education: [
         {
             school: "Mulawarman University",
@@ -160,7 +198,7 @@ export const cvData = {
             },
             {
                 name: { en: "Backend & Systems", id: "Backend & Sistem" },
-                skills: ["Machine Learning (Python)", "Database (PostgreSQL, MySQL, MongoDB)", "REST API", "Docker", "Git"]
+                skills: ["Machine Learning", "Scikit-Learn", "FastAPI", "Python", "Database (PostgreSQL, MySQL, MongoDB)", "REST API", "Docker", "Git"]
             },
             {
                 name: { en: "Design & Tools", id: "Desain & Alat" },
@@ -168,8 +206,8 @@ export const cvData = {
             }
         ],
         soft: {
-            en: ["Leadership", "Teamwork", "Problem Solving", "Critical Thinking", "Professional Communication"],
-            id: ["Kepemimpinan", "Kerja Tim", "Penyelesaian Masalah", "Berpikir Kritis", "Komunikasi Profesional"]
+            en: ["Discipline", "Leadership", "Teamwork", "Problem Solving", "Critical Thinking", "Professional Communication"],
+            id: ["Disiplin", "Kepemimpinan", "Kerja Tim", "Penyelesaian Masalah", "Berpikir Kritis", "Komunikasi Profesional"]
         }
     },
     certificates: [
@@ -203,6 +241,31 @@ export const cvData = {
         }
     ],
     projects: [
+        {
+            title: "AI Sales Prediction System",
+            description: {
+                en: "A mini AI Sales Prediction System built for Goodeva's technical test. Features a React frontend, Python FastAPI backend, and Scikit-learn Machine Learning model.",
+                id: "Sistem mini AI Prediksi Penjualan yang dibangun untuk tes teknikal Goodeva. Terdiri dari frontend React, backend Python FastAPI, dan model Machine Learning Scikit-learn."
+            },
+            overview: {
+                en: "Developed a full-stack system predicting product sales status based on quantity, price, and discount. Built as a technical test submission for Goodeva.",
+                id: "Mengembangkan sistem full-stack untuk memprediksi status penjualan produk berdasarkan jumlah, harga, dan diskon. Dibangun sebagai hasil tes teknikal untuk Goodeva."
+            },
+            role: {
+                en: "Fullstack Developer & ML Engineer. Implemented the logistic regression model, FastAPI backend with JWT auth, and React UI.",
+                id: "Fullstack Developer & ML Engineer. Mengimplementasikan model regresi logistik, backend FastAPI dengan autentikasi JWT, dan antarmuka React."
+            },
+            features: {
+                en: ["Sales Prediction", "Data Table", "JWT Authentication", "Machine Learning Model"],
+                id: ["Prediksi Penjualan", "Tabel Data", "Autentikasi JWT", "Model Machine Learning"]
+            },
+            stack: ["React Vite", "FastAPI", "Python", "Scikit-learn"],
+            type: "Web App",
+            image: "/aisales2.png",
+            screenshots: ["/aisales1.png", "/aisales2.png"],
+            url: "https://drive.google.com/drive/folders/17mmcqL80xKBqgyFZbh68CRLHk_dSRRai",
+            github: "https://github.com/Viona1445/ai-sales-prediction-system",
+        },
         {
             title: "Rivolta Solusi Teknologi",
             description: {
@@ -379,7 +442,7 @@ export const cvData = {
                 en: ["Health UI Design", "Mobile Prototyping", "Medication Tracking", "Educational Content"],
                 id: ["Desain UI Kesehatan", "Prototyping Mobile", "Pelacakan Obat", "Konten Edukatif"]
             },
-            stack: ["Android Studio", "UI/UX Design", "Mobile Development"],
+            stack: ["Android Studio", "Kotlin", "UI/UX Design", "Mobile Development"],
             type: "Mobile App",
             image: "/stroko1.png",
             screenshots: ["/stroko1.png"],
@@ -406,9 +469,9 @@ export const cvData = {
             },
             stack: ["Python", "UI Design Implementation"],
             type: "Software System",
-            image: "",
-            screenshots: [],
-            url: "",
+            image: "/vehicle.png",
+            screenshots: ["/vehicle.png"],
+            url: "https://drive.google.com/drive/folders/1FCW-8LjZEOLLtLpnpYQzxTDovsCvgRGm?hl=id",
             github: "",
         },
         {
@@ -431,9 +494,9 @@ export const cvData = {
             },
             stack: ["Blender", "Unity", "3D Modeling"],
             type: "3D Application",
-            image: "",
-            screenshots: [],
-            url: "",
+            image: "/mapsplan.png",
+            screenshots: ["/mapsplan.png"],
+            url: "https://drive.google.com/drive/folders/1YgYaekcfdhvFXSNPuHAQTgIEEy2LLei0?hl=id",
             github: "",
         }
     ],

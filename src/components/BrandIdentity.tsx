@@ -19,7 +19,7 @@ const BrandIdentity = () => {
                     >
                         {i18n.language === 'en' ? 'Brand Identity' : 'Identitas Merek'}
                     </motion.h2>
-                    <div className="w-20 h-1 bg-premium-blue mx-auto rounded-full mb-6" />
+                    <div className="w-20 h-1 bg-premium-pink mx-auto rounded-full mb-6" />
                     <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
                         {i18n.language === 'en'
                             ? "I'm not a professional logo designer, but I occasionally help teams craft visual identities when needed. Here are some of the design works I've contributed to."
@@ -43,8 +43,8 @@ const BrandIdentity = () => {
                             transition={{ delay: idx * 0.1 }}
                             className="group perspective-1000"
                         >
-                            <div className="bg-navy-900/40 p-8 rounded-[32px] border border-white/5 hover:border-premium-blue/20 transition-colors h-full flex flex-col items-center">
-                                <div className="w-full aspect-square bg-navy-900/50 rounded-2xl flex items-center justify-center mb-6 overflow-hidden p-6 border border-white/5 group-hover:border-premium-blue/20 transition-all">
+                            <div className="bg-navy-900/40 p-8 rounded-[32px] border border-white/5 hover:border-premium-pink/20 transition-colors h-full flex flex-col items-center">
+                                <div className="w-full aspect-square bg-navy-900/50 rounded-2xl flex items-center justify-center mb-6 overflow-hidden p-6 border border-white/5 group-hover:border-premium-pink/20 transition-all">
                                     <motion.img
                                         whileHover={{ scale: 1.15 }}
                                         src={logo.image}
@@ -52,7 +52,7 @@ const BrandIdentity = () => {
                                         className="max-w-full max-h-full object-contain filter drop-shadow-2xl"
                                     />
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-3 text-center group-hover:text-premium-blue transition-colors">{logo.name}</h3>
+                                <h3 className="text-xl font-bold text-white mb-3 text-center group-hover:text-premium-pink transition-colors">{logo.name}</h3>
                                 <p className="text-slate-400 text-xs text-center leading-relaxed mb-6">
                                     {logo.description[currentLang]}
                                 </p>
@@ -64,15 +64,15 @@ const BrandIdentity = () => {
                                         href={(logo as any).figmaLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center space-x-2 text-[10px] font-bold text-premium-blue hover:text-white transition-colors group/figma mb-6"
+                                        className="inline-flex items-center space-x-2 text-[10px] font-bold text-premium-pink hover:text-white transition-colors group/figma mb-6"
                                     >
-                                        <span className="px-4 py-2 bg-premium-blue/5 rounded-xl group-hover/figma:bg-premium-blue/20 transition-all border border-premium-blue/10 group-hover/figma:border-premium-blue/30">
+                                        <span className="px-4 py-2 bg-premium-pink/5 rounded-xl group-hover/figma:bg-premium-pink/20 transition-all border border-premium-pink/10 group-hover/figma:border-premium-pink/30">
                                             {currentLang === 'en' ? 'View on Figma' : 'Lihat di Figma'}
                                         </span>
                                     </motion.a>
                                 )}
 
-                                <div className="mt-auto pt-4 flex items-center justify-center space-x-2 text-[10px] font-bold text-premium-blue uppercase tracking-widest opacity-60">
+                                <div className="mt-auto pt-4 flex items-center justify-center space-x-2 text-[10px] font-bold text-premium-pink uppercase tracking-widest opacity-60">
                                     <PenTool className="w-3 h-3" />
                                     <span>Crafted in Figma</span>
                                 </div>

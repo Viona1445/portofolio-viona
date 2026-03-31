@@ -17,11 +17,22 @@ const Experience = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold text-white mb-4"
+                        className="text-4xl md:text-5xl font-bold text-white mb-6"
                     >
                         {i18n.language === 'en' ? 'Professional Journey' : 'Perjalanan Karir'}
                     </motion.h2>
-                    <div className="w-20 h-1 bg-premium-blue mx-auto rounded-full" />
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="mb-8"
+                    >
+                        <span className="px-5 py-2.5 bg-premium-pink/10 text-premium-pink text-sm font-black rounded-full uppercase tracking-widest border border-premium-pink/20 inline-block shadow-lg">
+                            {i18n.language === 'en' ? '±2 Years of Experience' : '±2 Tahun Pengalaman'}
+                        </span>
+                    </motion.div>
+                    <div className="w-20 h-1 bg-premium-pink mx-auto rounded-full" />
                 </div>
 
                 <div className="relative">
@@ -35,16 +46,17 @@ const Experience = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
+                            style={{ willChange: 'transform, opacity' }}
                             className={`relative mb-12 md:mb-16 w-full flex items-center ${idx % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
                         >
                             {/* Timeline Dot */}
-                            <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-premium-blue rounded-full z-10 -translate-x-1/2 shadow-[0_0_15px_rgba(59,130,246,0.6)] border-4 border-navy-950" />
+                            <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-premium-pink rounded-full z-10 -translate-x-1/2 shadow-[0_0_15px_rgba(59,130,246,0.6)] border-4 border-navy-950" />
 
                             {/* Content Card container */}
                             <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${idx % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                                <div className="bg-navy-900/40 p-6 md:p-8 rounded-3xl border border-white/5 hover:border-premium-blue/20 transition-colors">
+                                <div className="bg-navy-900/40 p-6 md:p-8 rounded-3xl border border-white/5 hover:border-premium-pink/20 transition-colors">
                                     <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-                                        <span className="px-4 py-1.5 bg-premium-blue/10 text-premium-blue text-[10px] font-bold rounded-lg uppercase tracking-widest border border-premium-blue/20">
+                                        <span className="px-4 py-1.5 bg-premium-pink/10 text-premium-pink text-[10px] font-bold rounded-lg uppercase tracking-widest border border-premium-pink/20">
                                             {exp.role}
                                         </span>
                                         <div className="flex items-center text-slate-500 text-xs">
@@ -53,7 +65,7 @@ const Experience = () => {
                                         </div>
                                     </div>
 
-                                    <h3 className="text-xl md:text-2xl font-bold text-white mb-1 group-hover:text-premium-blue transition-colors">
+                                    <h3 className="text-xl md:text-2xl font-bold text-white mb-1 group-hover:text-premium-pink transition-colors">
                                         {exp.company}
                                     </h3>
                                     <div className="flex items-center text-slate-400 text-xs mb-6">
@@ -64,7 +76,7 @@ const Experience = () => {
                                     <ul className="space-y-3">
                                         {(exp.highlights[currentLang] || exp.highlights['en']).map((item, i) => (
                                             <li key={i} className="flex items-start text-slate-300 text-sm leading-relaxed">
-                                                <span className="w-1.5 h-1.5 bg-premium-blue rounded-full mt-2 mr-3 flex-shrink-0" />
+                                                <span className="w-1.5 h-1.5 bg-premium-pink rounded-full mt-2 mr-3 flex-shrink-0" />
                                                 {item}
                                             </li>
                                         ))}
@@ -76,9 +88,9 @@ const Experience = () => {
                                                 href={exp.proof}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center space-x-2 text-[10px] font-bold text-premium-blue hover:text-white transition-colors group/link uppercase tracking-wider"
+                                                className="inline-flex items-center space-x-2 text-[10px] font-bold text-premium-pink hover:text-white transition-colors group/link uppercase tracking-wider"
                                             >
-                                                <span className="px-4 py-2 bg-premium-blue/5 rounded-xl group-hover/link:bg-premium-blue/20 transition-all border border-premium-blue/10 group-hover/link:border-premium-blue/30">
+                                                <span className="px-4 py-2 bg-premium-pink/5 rounded-xl group-hover/link:bg-premium-pink/20 transition-all border border-premium-pink/10 group-hover/link:border-premium-pink/30">
                                                     {currentLang === 'en' ? 'View Activity' : 'Lihat Aktivitas'}
                                                 </span>
                                             </a>

@@ -24,7 +24,7 @@ const Projects = () => {
                         >
                             {i18n.language === 'en' ? 'Featured Work' : 'Karya Unggulan'}
                         </motion.h2>
-                        <div className="w-20 h-1 bg-premium-blue rounded-full" />
+                        <div className="w-20 h-1 bg-premium-pink rounded-full" />
                     </div>
                     <p className="text-slate-400 max-w-md text-right hidden md:block leading-relaxed">
                         {i18n.language === 'en'
@@ -41,9 +41,10 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
+                            style={{ willChange: 'transform, opacity' }}
                             className="group"
                         >
-                            <div className="bg-navy-900/40 h-full rounded-[40px] overflow-hidden border border-white/5 hover:border-premium-blue/20 transition-colors duration-300 flex flex-col">
+                            <div className="bg-navy-900/40 h-full rounded-[40px] overflow-hidden border border-white/5 hover:border-premium-pink/20 transition-colors duration-300 flex flex-col">
                                 {/* Project Image Container */}
                                 <div className="h-64 bg-gradient-to-br from-navy-800 to-navy-950 relative overflow-hidden shrink-0">
                                     {project.image ? (
@@ -74,14 +75,14 @@ const Projects = () => {
                                     {/* Tech Pills */}
                                     <div className="absolute top-6 right-6 flex flex-wrap justify-end gap-2 max-w-[70%]">
                                         {project.stack.slice(0, 3).map((s, i) => (
-                                            <span key={i} className="px-3 py-1 bg-navy-950/50 backdrop-blur-md rounded-full text-[10px] uppercase font-black text-white tracking-widest border border-white/10">
+                                            <span key={i} className="px-3 py-1 bg-navy-950/90 rounded-full text-[10px] uppercase font-black text-white tracking-widest border border-white/10">
                                                 {s}
                                             </span>
                                         ))}
                                     </div>
 
                                     {/* Type Badge */}
-                                    <div className="absolute bottom-6 left-6 p-2 bg-premium-blue rounded-xl text-white shadow-lg">
+                                    <div className="absolute bottom-6 left-6 p-2 bg-premium-pink rounded-xl text-white shadow-lg">
                                         {project.type === 'Mobile App' ? <Smartphone size={20} /> : <Monitor size={20} />}
                                     </div>
                                 </div>
@@ -89,10 +90,10 @@ const Projects = () => {
                                 <div className="p-8 flex-1 flex flex-col">
                                     <div className="flex justify-between items-start mb-4">
                                         <div>
-                                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-premium-blue transition-colors">
+                                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-premium-pink transition-colors">
                                                 {project.title}
                                             </h3>
-                                            <div className="text-premium-blue/60 text-[10px] font-black uppercase tracking-widest leading-none">
+                                            <div className="text-premium-pink/60 text-[10px] font-black uppercase tracking-widest leading-none">
                                                 {project.type}
                                             </div>
                                         </div>
@@ -129,7 +130,7 @@ const Projects = () => {
                                         </div>
                                         <button
                                             onClick={() => setSelectedProject(project)}
-                                            className="text-xs font-black uppercase tracking-widest text-premium-blue hover:text-white transition-colors flex items-center space-x-2"
+                                            className="text-xs font-black uppercase tracking-widest text-premium-pink hover:text-white transition-colors flex items-center space-x-2"
                                         >
                                             <span>{currentLang === 'en' ? 'Full Case Study' : 'Studi Kasus Lengkap'}</span>
                                             <ChevronRight size={14} />

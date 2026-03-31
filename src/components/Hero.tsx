@@ -10,9 +10,9 @@ const Hero = () => {
     return (
         <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
             {/* Background Orbs */}
-            <div className="absolute top-1/4 -left-20 w-72 h-72 bg-premium-blue/20 rounded-full blur-[120px] animate-pulse" />
+            <div className="absolute top-1/4 -left-20 w-72 h-72 bg-premium-pink/20 rounded-full blur-[120px] animate-pulse" />
             <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-900/20 rounded-full blur-[150px] animate-pulse delay-700" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-premium-blue/5 rounded-full blur-[180px] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-premium-pink/5 rounded-full blur-[180px] pointer-events-none" />
 
             {/* Floating Particles */}
             {[...Array(6)].map((_, i) => (
@@ -46,7 +46,7 @@ const Hero = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="inline-block py-1 px-4 rounded-full bg-premium-blue/10 border border-premium-blue/20 text-premium-blue text-sm font-bold mb-6"
+                        className="inline-block py-1 px-4 rounded-full bg-premium-pink/10 border border-premium-pink/20 text-premium-pink text-sm font-bold mb-6"
                     >
                         {i18n.language === 'en' ? 'Available for Work' : 'Tersedia untuk Pekerjaan'}
                     </motion.span>
@@ -68,7 +68,7 @@ const Hero = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             href="#contact"
-                            className="bg-premium-blue text-white px-8 py-4 rounded-2xl font-bold shadow-lg premium-glow flex items-center space-x-2"
+                            className="bg-premium-pink text-white px-8 py-4 rounded-2xl font-bold shadow-lg premium-glow flex items-center space-x-2"
                         >
                             <Mail className="w-5 h-5" />
                             <span>{i18n.language === 'en' ? 'Hire Me' : 'Hubungi Saya'}</span>
@@ -79,9 +79,9 @@ const Hero = () => {
                             whileTap={{ scale: 0.95 }}
                             href="/2026_CV_VIONA_ASYA_ARINDA.pdf"
                             download
-                            className="glass-card text-white px-8 py-4 rounded-2xl font-bold border border-white/10 hover:border-premium-blue/50 transition-all flex items-center space-x-2"
+                            className="glass-card text-white px-8 py-4 rounded-2xl font-bold border border-white/10 hover:border-premium-pink/50 transition-all flex items-center space-x-2"
                         >
-                            <Download className="w-5 h-5 text-premium-blue" />
+                            <Download className="w-5 h-5 text-premium-pink" />
                             <span>{i18n.language === 'en' ? 'Download CV' : 'Unduh CV'}</span>
                         </motion.a>
                     </div>
@@ -96,7 +96,7 @@ const Hero = () => {
                 >
                     <div className="relative w-80 h-80 md:w-[450px] md:h-[450px]">
                         {/* Elegant Border Ring */}
-                        <div className="absolute inset-0 border-2 border-premium-blue/30 rounded-[40px] rotate-6 scale-105 animate-[spin_20s_linear_infinite]" />
+                        <div className="absolute inset-0 border-2 border-premium-pink/30 rounded-[40px] rotate-6 scale-105 animate-[spin_20s_linear_infinite]" />
                         <div className="absolute inset-0 border-2 border-white/10 rounded-[40px] -rotate-3 scale-105" />
 
                         <div className="relative w-full h-full rounded-[40px] overflow-hidden border-2 border-white/10 premium-glow">
