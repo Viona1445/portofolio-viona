@@ -17,10 +17,16 @@ const Footer = () => {
                         : "Membangun pengalaman digital premium dengan fokus pada kode yang bersih dan desain interaktif."}
                 </p>
 
-                <div className="flex items-center text-slate-500 text-xs mb-8">
+                <div className="flex flex-col items-center text-slate-500 text-xs mb-8 gap-2">
                     <span>© {new Date().getFullYear()} {cvData.personalInfo.name}. All rights reserved.</span>
+                    <span className="flex items-center gap-1.5 opacity-70">
+                        {i18n.language === 'en' ? 'Built with' : 'Dibuat dengan'} 
+                        <span className="text-[#61DAFB] font-medium">React</span>, 
+                        <span className="text-[#38B2AC] font-medium">Tailwind CSS</span>,
+                        {i18n.language === 'en' ? '&' : '&'} 
+                        <span className="text-white font-medium">Framer Motion</span>
+                    </span>
                 </div>
-
             </div>
         </footer>
     );
