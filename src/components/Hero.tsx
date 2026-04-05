@@ -42,14 +42,18 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <motion.span
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
-                        className="inline-block py-1 px-4 rounded-full bg-premium-pink/10 border border-premium-pink/20 text-premium-pink text-sm font-bold mb-6"
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                        className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-bold mb-6 shadow-[0_0_15px_rgba(16,185,129,0.2)] backdrop-blur-md"
                     >
-                        {i18n.language === 'en' ? 'Available for Work' : 'Tersedia untuk Pekerjaan'}
-                    </motion.span>
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        <span>{i18n.language === 'en' ? 'Available for Work' : 'Tersedia untuk Pekerjaan'}</span>
+                    </motion.div>
 
                     <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
                         {cvData.personalInfo.name}
