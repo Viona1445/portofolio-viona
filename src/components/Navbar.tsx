@@ -41,17 +41,9 @@ const Navbar = () => {
                     animate={{ opacity: 1, x: 0 }}
                     className="flex items-center"
                 >
-                    {/* Full logo (Desktop) */}
-                    <div className="hidden md:block text-2xl font-bold tracking-tighter text-white">
+                    {/* Logo */}
+                    <div className="text-xl md:text-2xl font-bold tracking-tighter text-white">
                         VIONA<span className="text-premium-pink text-glow">.</span>
-                    </div>
-                    {/* Mini logo (Mobile) */}
-                    <div className="md:hidden">
-                        <img
-                            src="/mini-logo.png"
-                            alt="Logo"
-                            className="h-8 w-auto object-contain"
-                        />
                     </div>
                 </motion.div>
 
